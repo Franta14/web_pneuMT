@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tomáš Jandus – Malířské a natěračské práce</title>
-    <link rel="preload" as="image" href="hlavni-fotka.jpg">
+    <title>MT Pneuservis</title>
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=1920&q=80">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
@@ -16,7 +16,7 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#1e3a8a',
+                        primary: '#1f1b1c',
                     }
                 }
             }
@@ -28,7 +28,7 @@
     <!-- Horní navigace přes úvodní obrázek -->
     <header class="relative min-h-screen flex flex-col justify-between isolate overflow-hidden">
         <!-- Optimizované načítání pozadí jako klasický obrázek (zabrání zasekávání při scrollování nahoru) -->
-        <img src="hlavni-fotka.jpg" alt="" class="absolute inset-0 w-full h-full object-cover -z-20" loading="eager" decoding="sync">
+        <img src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=1920&q=80" alt="Pneuservis" class="absolute inset-0 w-full h-full object-cover -z-20" loading="eager" decoding="sync">
         <!-- Tmavý překryv pro dokonalou čitelnost textu -->
         <div class="absolute inset-0 bg-black/50 -z-10"></div>
 
@@ -38,12 +38,14 @@
                 <div class="flex items-center justify-between h-20">
                     
                     <!-- Logo / Název firmy -->
-                    <a href="#" class="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-widest uppercase hover:text-blue-200 transition-colors">
-                        Tomáš Jandus
+                    <a href="#" class="flex items-center gap-3 text-lg sm:text-xl md:text-2xl font-bold text-white tracking-widest uppercase hover:text-gray-300 transition-colors">
+                        <!-- Zde je napojené logo z adresáře -->
+                        <img src="icon.jpg" alt="Logo MT Pneuservis" class="h-10 w-auto rounded-md">
+                        MT Pneuservis
                     </a>
 
                     <!-- Tlačítko mobilního menu -->
-                    <button id="mobile-menu-btn" type="button" class="lg:hidden text-white hover:text-blue-200 focus:outline-none p-2" aria-label="Menu">
+                    <button id="mobile-menu-btn" type="button" class="lg:hidden text-white hover:text-gray-300 focus:outline-none p-2" aria-label="Menu">
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -51,22 +53,22 @@
                     
                     <!-- Navigační odkazy pro desktop -->
                     <ul class="hidden lg:flex items-center space-x-8 text-sm md:text-base font-semibold text-white/95">
-                        <li><a href="#o-mne" class="hover:text-blue-200 transition-colors">O mně</a></li>
-                        <li><a href="#sluzby" class="hover:text-blue-200 transition-colors">Služby</a></li>
-                        <li><a href="#reference" class="hover:text-blue-200 transition-colors">Reference</a></li>
-                        <li><a href="#cenik" class="hover:text-blue-200 transition-colors">Ceník</a></li>
-                        <li><a href="#kontakt" class="hover:text-blue-200 transition-colors">Kontakt</a></li>
+                        <li><a href="#o-mne" class="hover:text-gray-300 transition-colors">O nás</a></li>
+                        <li><a href="#sluzby" class="hover:text-gray-300 transition-colors">Služby</a></li>
+                        <li><a href="#reference" class="hover:text-gray-300 transition-colors">Reference</a></li>
+                        <li><a href="#cenik" class="hover:text-gray-300 transition-colors">Ceník</a></li>
+                        <li><a href="#kontakt" class="hover:text-gray-300 transition-colors">Kontakt</a></li>
                     </ul>
                 </div>
 
                 <!-- Mobilní rozbalovací menu -->
                 <div id="mobile-menu" class="hidden lg:hidden pb-6 pt-4">
                     <ul class="flex flex-col space-y-4 text-base font-semibold text-white/90">
-                        <li><a href="#o-mne" class="mobile-nav-link block hover:text-blue-200">O mně</a></li>
-                        <li><a href="#sluzby" class="mobile-nav-link block hover:text-blue-200">Služby</a></li>
-                        <li><a href="#reference" class="mobile-nav-link block hover:text-blue-200">Reference</a></li>
-                        <li><a href="#cenik" class="mobile-nav-link block hover:text-blue-200">Ceník</a></li>
-                        <li><a href="#kontakt" class="mobile-nav-link block hover:text-blue-200">Kontakt</a></li>
+                        <li><a href="#o-mne" class="mobile-nav-link block hover:text-gray-300">O nás</a></li>
+                        <li><a href="#sluzby" class="mobile-nav-link block hover:text-gray-300">Služby</a></li>
+                        <li><a href="#reference" class="mobile-nav-link block hover:text-gray-300">Reference</a></li>
+                        <li><a href="#cenik" class="mobile-nav-link block hover:text-gray-300">Ceník</a></li>
+                        <li><a href="#kontakt" class="mobile-nav-link block hover:text-gray-300">Kontakt</a></li>
                     </ul>
                 </div>
             </div>
@@ -76,23 +78,23 @@
         <div class="relative z-10 flex-grow flex items-center justify-center text-center px-4 py-16">
             <div class="max-w-4xl mx-auto">
                 <h1 class="text-white drop-shadow-lg">
-                    <span class="block text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight mb-2">Tomáš Jandus</span>
-                    <span class="block text-xl sm:text-2xl md:text-3xl font-light uppercase tracking-widest text-blue-100">Malířské a natěračské práce</span>
+                    <span class="block text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight mb-2">MT Pneuservis</span>
+                    <span class="block text-xl sm:text-2xl md:text-3xl font-light uppercase tracking-widest text-gray-200">Kralupy nad Vltavou | +420 775 945 023</span>
                 </h1>
                 <p class="mt-6 text-xl md:text-2xl text-white/90 drop-shadow-md font-light">
-                    Působím v Českém Krumlově a přijedu za vámi až do okruhu 190 km.
+                    Neváhejte zavolat a domluvíme si termín na váš automobil v našem novém pneuservisu.
                 </p>
                 
-                <!-- Modrá linka pod nadpisem -->
-                <div class="w-24 h-1.5 bg-blue-500 mx-auto my-6"></div>
+                <!-- Linka pod nadpisem -->
+                <div class="w-24 h-1.5 bg-gray-800 mx-auto my-6"></div>
                 
-                <!-- Přirozené tlačítko pro kontakt -->
+                <!-- Tlačítka pro kontakt -->
                 <div class="mt-8">
                     <a href="#kontakt" class="inline-block px-8 py-3 bg-transparent hover:bg-white/15 text-white font-medium border border-white/50 backdrop-blur-sm transition-all" style="margin: 5px;">
-                        Kontaktujte mě
+                        Kontaktujte nás
                     </a>
-                    <a href="https://www.nejremeslnici.cz/profil/486179-tomas-jandus" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 bg-transparent hover:bg-white/15 text-white font-medium border border-white/50 backdrop-blur-sm transition-all" style="margin: 5px; background-color: rgba(255,255,255,0.1);">
-                        Recenze (NejŘemeslníci.cz)
+                    <a href="#reference" class="inline-block px-8 py-3 bg-transparent hover:bg-white/15 text-white font-medium border border-white/50 backdrop-blur-sm transition-all" style="margin: 5px; background-color: rgba(255,255,255,0.1);">
+                        Hodnocení zákazníků
                     </a>
                 </div>
             </div>
@@ -112,12 +114,12 @@
         <!-- O mně -->
         <section id="o-mne" class="py-16 md:py-24 bg-white">
             <div class="max-w-3xl mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 uppercase tracking-wide">O mně</h2>
-                <div class="w-16 h-1 bg-blue-500 mx-auto mb-8"></div>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 uppercase tracking-wide">O nás</h2>
+                <div class="w-16 h-1 bg-gray-800 mx-auto mb-8"></div>
                 
                 <div class="space-y-6 text-lg md:text-xl leading-relaxed text-slate-600">
                     <p>
-                        Nabízím veškeré malířské a natěračské práce, sádrové a dekorativní stěrky. Jsem plně vybaven pro práci ve výškách a ve složitějších terénech.
+                        Jsme nový pneuservis a autoservis v Kralupech nad Vltavou. Naším cílem je poskytovat rychlé a kvalitní služby pro váš vůz.
                     </p>
                 </div>
             </div>
@@ -126,54 +128,56 @@
         <!-- Služby -->
         <section id="sluzby" class="py-12 md:py-16 bg-slate-50 border-y border-slate-200/80">
             <div class="max-w-6xl mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 text-center uppercase tracking-wide">Moje služby</h2>
-                <div class="w-16 h-1 bg-blue-500 mx-auto mb-10"></div>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 text-center uppercase tracking-wide">Naše služby</h2>
+                <div class="w-16 h-1 bg-gray-800 mx-auto mb-10"></div>
                 
                 <div class="flex flex-col md:flex-row gap-12 lg:gap-16 items-start">
                     <!-- Obrázek u služeb -->
                     <div class="w-full md:w-1/2">
-                        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=800&q=80" alt="Ukázka práce a malířských potřeb" class="w-full h-auto border border-slate-200 object-cover">
+                        <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&w=800&q=80" alt="Servis automobilů" class="w-full h-auto border border-slate-200 object-cover rounded-lg shadow-sm">
                     </div>
                     
                     <!-- Texty a odrážky služeb -->
                     <div class="w-full md:w-1/2 space-y-6 mt-4 md:mt-0">
                         
-                        <!-- Blok Malování a nátěry -->
+                        <!-- Blok Pneuservis -->
                         <div>
                             <h3 class="text-xl md:text-2xl font-bold text-primary mb-3 uppercase tracking-wide flex items-center gap-3">
-                                <span class="w-2.5 h-2.5 bg-blue-500 inline-block"></span>
-                                Malování a nátěry
+                                <span class="w-2.5 h-2.5 bg-gray-800 inline-block"></span>
+                                Pneuservis
                             </h3>
                             <ul class="space-y-2 text-base md:text-lg text-slate-600 list-disc ml-6">
-                                <li>Malířské práce</li>
-                                <li>Natěrač a lakýrník</li>
-                                <li>Aplikace tapet</li>
+                                <li>Pneuservis</li>
                             </ul>
                         </div>
                         
-                        <!-- Blok Štuky a stěrky -->
+                        <!-- Blok Autoservis -->
                         <div>
                             <h3 class="text-xl md:text-2xl font-bold text-primary mb-3 uppercase tracking-wide flex items-center gap-3">
-                                <span class="w-2.5 h-2.5 bg-blue-500 inline-block"></span>
-                                Štuky a stěrky
+                                <span class="w-2.5 h-2.5 bg-gray-800 inline-block"></span>
+                                Běžný servis automobilů
                             </h3>
                             <ul class="space-y-2 text-base md:text-lg text-slate-600 list-disc ml-6">
-                                <li>Štukování</li>
-                                <li>Benátský štuk</li>
-                                <li>Designové a sádrové stěrky</li>
+                                <li>Servis automobilů</li>
+                                <li>Výměna oleje a filtrů</li>
+                                <li>Výměna brzdových destiček</li>
+                                <li>Výměna brzdové kapaliny</li>
+                                <li>Výměna žárovky</li>
                             </ul>
                         </div>
 
-                        <!-- Blok Renovace -->
+                        <!-- Blok Diagnostika a další -->
                         <div>
                             <h3 class="text-xl md:text-2xl font-bold text-primary mb-3 uppercase tracking-wide flex items-center gap-3">
-                                <span class="w-2.5 h-2.5 bg-blue-500 inline-block"></span>
-                                Renovace
+                                <span class="w-2.5 h-2.5 bg-gray-800 inline-block"></span>
+                                Ostatní odborné práce
                             </h3>
                             <ul class="space-y-2 text-base md:text-lg text-slate-600 list-disc ml-6">
-                                <li>Renovace oken</li>
-                                <li>Renovace dveří</li>
-                                <li>Renovace nábytku</li>
+                                <li>Autodiagnostika</li>
+                                <li>Servis klimatizace</li>
+                                <li>Výměna rozvodů motoru</li>
+                                <li>Výměna autobaterií</li>
+                                <li>Mechanické práce</li>
                             </ul>
                         </div>
                     </div>
@@ -184,69 +188,60 @@
         <!-- Reference -->
         <section id="reference" class="py-16 md:py-24 bg-white">
             <div class="max-w-6xl mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 text-center uppercase tracking-wide">Reference</h2>
-                <div class="w-16 h-1 bg-blue-500 mx-auto mb-14"></div>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-2 text-center uppercase tracking-wide">Hodnocení zákazníků</h2>
+                <p class="text-center text-lg text-slate-600 mb-4">4,9 z 5 ⭐ (na základě 77 recenzí na Google)</p>
+                <div class="w-16 h-1 bg-gray-800 mx-auto mb-10"></div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto">
-                    <!-- Projekt 1 -->
-                    <div class="bg-slate-50 border border-slate-200 p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <h3 class="text-xl font-bold text-slate-800 mb-4 text-center border-b border-slate-200 pb-2">Renovace oken</h3>
-                        <div class="flex gap-2">
-                            <div class="w-1/2 relative group">
-                                <img src="renovace-oken-po-odstraneni-stare-barvy_20250801_091244.avif" alt="Před" class="w-full h-64 sm:h-72 md:h-80 object-cover rounded">
-                                <span class="absolute bottom-3 left-3 bg-black/70 text-white text-sm font-semibold px-3 py-1 rounded">Před</span>
-                            </div>
-                            <div class="w-1/2 relative group">
-                                <img src="renovace-oken-osmo-antracitove-seda-ral-7016_20250802_142750.avif" alt="Po" class="w-full h-64 sm:h-72 md:h-80 object-cover rounded">
-                                <span class="absolute bottom-3 left-3 bg-blue-600/90 text-white text-sm font-semibold px-3 py-1 rounded">Po</span>
-                            </div>
+                    <!-- Recenze 1 -->
+                    <div class="bg-slate-50 border border-slate-200 p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2 border-b border-slate-200 pb-2 flex items-center justify-between">
+                                Zbyněk Vyhlas
+                                <span class="text-yellow-500 text-sm">⭐⭐⭐⭐⭐</span>
+                            </h3>
+                            <p class="text-slate-600 italic mt-4">"Rychlost, pohoda, skvělá cena. Absolutní spokojenost."</p>
                         </div>
                     </div>
 
-                    <!-- Projekt 2 -->
-                    <div class="bg-slate-50 border border-slate-200 p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <h3 class="text-xl font-bold text-slate-800 mb-4 text-center border-b border-slate-200 pb-2">Vymalování pokoje</h3>
-                        <div class="flex gap-2">
-                            <div class="w-1/2 relative group">
-                                <img src="vymalovani-pokoje-1-mistnost-16-4-m_1000013675.avif" alt="Před" class="w-full h-64 sm:h-72 md:h-80 object-cover rounded">
-                                <span class="absolute bottom-3 left-3 bg-black/70 text-white text-sm font-semibold px-3 py-1 rounded">Před</span>
-                            </div>
-                            <div class="w-1/2 relative group">
-                                <img src="vymalovani-pokoje-1-mistnost-16-4-m_1000013700.jpg" alt="Po" class="w-full h-64 sm:h-72 md:h-80 object-cover rounded">
-                                <span class="absolute bottom-3 left-3 bg-blue-600/90 text-white text-sm font-semibold px-3 py-1 rounded">Po</span>
-                            </div>
+                    <!-- Recenze 2 -->
+                    <div class="bg-slate-50 border border-slate-200 p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2 border-b border-slate-200 pb-2 flex items-center justify-between">
+                                Sandra Malcova
+                                <span class="text-yellow-500 text-sm">⭐⭐⭐⭐⭐</span>
+                            </h3>
+                            <p class="text-slate-600 italic mt-4">"Wow, bezkonkurenční záchrana v podobě vstřícného a šikovného servismana! Dneska jsem píchla a na místě opraveno. Takový vstřícný přístup už se málokdy vidí. Servis doporučuji všemi deseti 👍"</p>
                         </div>
                     </div>
 
-                    <!-- Projekt 3 -->
-                    <div class="bg-slate-50 border border-slate-200 p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <h3 class="text-xl font-bold text-slate-800 mb-4 text-center border-b border-slate-200 pb-2">Výmalba vápennou barvou</h3>
-                        <div class="flex gap-2">
-                            <div class="w-1/2 relative group">
-                                <img src="vymalba-vapennou-barvou_20250603_120353.jpg" alt="Před" class="w-full h-64 sm:h-72 md:h-80 object-cover rounded">
-                                <span class="absolute bottom-3 left-3 bg-black/70 text-white text-sm font-semibold px-3 py-1 rounded">Před</span>
-                            </div>
-                            <div class="w-1/2 relative group">
-                                <img src="vymalba-vapennou-barvou_20250604_132756.jpg" alt="Po" class="w-full h-64 sm:h-72 md:h-80 object-cover rounded">
-                                <span class="absolute bottom-3 left-3 bg-blue-600/90 text-white text-sm font-semibold px-3 py-1 rounded">Po</span>
-                            </div>
+                    <!-- Recenze 3 -->
+                    <div class="bg-slate-50 border border-slate-200 p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2 border-b border-slate-200 pb-2 flex items-center justify-between">
+                                Martin Bayer
+                                <span class="text-yellow-500 text-sm">⭐⭐⭐⭐⭐</span>
+                            </h3>
+                            <p class="text-slate-600 italic mt-4">"Děkuji za rychlou a profesionální reakci. Potřeboval jsem pomoc v neděli a vše proběhlo naprosto bez problémů. Skvělá domluva, rychlá práce a ochota. Mohu jen doporučit!"</p>
                         </div>
                     </div>
 
-                    <!-- Projekt 4 -->
-                    <div class="bg-slate-50 border border-slate-200 p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <h3 class="text-xl font-bold text-slate-800 mb-4 text-center border-b border-slate-200 pb-2">Nátěr dřevěné fasády</h3>
-                        <div class="flex gap-2">
-                            <div class="w-1/2 relative group">
-                                <img src="nateracske-prace-olejovou-lazurou_20250527_105954-23a400af70c.jpg" alt="Před" class="w-full h-64 sm:h-72 md:h-80 object-cover rounded">
-                                <span class="absolute bottom-3 left-3 bg-black/70 text-white text-sm font-semibold px-3 py-1 rounded">Před</span>
-                            </div>
-                            <div class="w-1/2 relative group">
-                                <img src="nateracske-prace-olejovou-lazurou_20250530_135344-7954c0b363a.jpg" alt="Po" class="w-full h-64 sm:h-72 md:h-80 object-cover rounded">
-                                <span class="absolute bottom-3 left-3 bg-blue-600/90 text-white text-sm font-semibold px-3 py-1 rounded">Po</span>
-                            </div>
+                    <!-- Recenze 4 -->
+                    <div class="bg-slate-50 border border-slate-200 p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2 border-b border-slate-200 pb-2 flex items-center justify-between">
+                                Tomas Kubik
+                                <span class="text-yellow-500 text-sm">⭐⭐⭐⭐⭐</span>
+                            </h3>
+                            <p class="text-slate-600 italic mt-4">"Skvělý přístup. V sobotu večer jsem požádal o převážení kol, protože auto přenášelo značné vibrace. Po pár minutách jsem obdržel zprávu s termínem hned v neděli ráno. Kola mi majitel zkontroloval, vyvážil a vibrace jsou pryč. Na jaře se zastavím vyměnit na letní! Moc díky!"</p>
                         </div>
                     </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <a href="https://www.google.com/maps/place/MT+Cars/@50.2373187,14.2899667,17z/data=!4m8!3m7!1s0x470bc52a967a6de3:0x9bf31e12bd7b17f4!8m2!3d50.2373187!4d14.2899667!9m1!1b1!16s%2Fg%2F11q1r4w_wg?entry=ttu&g_ep=EgoyMDI2MTAwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 bg-gray-800 hover:bg-gray-900 text-white font-medium rounded shadow-sm hover:shadow-md transition-all">
+                        Zobrazit všechny recenze na Googlu
+                    </a>
                 </div>
             </div>
         </section>
@@ -255,15 +250,15 @@
         <section id="cenik" class="py-16 md:py-24 bg-slate-50 border-t border-slate-200">
             <div class="max-w-3xl mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 uppercase tracking-wide">Ceník</h2>
-                <div class="w-16 h-1 bg-blue-500 mx-auto mb-8"></div>
+                <div class="w-16 h-1 bg-gray-800 mx-auto mb-8"></div>
                 
                 <div class="mt-8">
                     <p class="text-xl md:text-2xl text-slate-800 font-semibold leading-relaxed mb-4">
-                        Cena prací bude vyřešena po osobní domluvě.
+                        Cena služeb závisí na typu vozidla a rozsahu prací. Kontaktujte nás pro přesnou kalkulaci.
                     </p>
 
                     <div class="mt-10">
-                        <a href="#kontakt" class="inline-block px-8 py-3 bg-primary hover:bg-blue-900 text-white font-medium shadow-sm hover:shadow-md transition-all">
+                        <a href="#kontakt" class="inline-block px-8 py-3 bg-primary hover:bg-gray-800 text-white font-medium shadow-sm hover:shadow-md transition-all">
                             Kontaktovat pro nezávaznou domluvu
                         </a>
                     </div>
@@ -279,55 +274,61 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center uppercase tracking-wide">Kontakt</h2>
             <div class="w-16 h-1 bg-white mx-auto mb-14"></div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-blue-100">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-gray-300">
                 
                 <!-- Adresa -->
                 <div class="flex items-start gap-4">
-                    <div class="bg-white/10 p-3 flex-shrink-0">
+                    <div class="bg-white/10 p-3 flex-shrink-0 rounded-md">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                     </div>
                     <div>
                         <h4 class="font-bold text-white text-lg mb-2 tracking-wide uppercase">Adresa</h4>
-                        <p class="leading-relaxed">Sídliště Plešivec 361,<br>381 01 Český Krumlov - Plešivec</p>
+                        <p class="leading-relaxed">Na Husarce 130,<br>278 01 Kralupy nad Vltavou 1</p>
                     </div>
                 </div>
 
                 <!-- Kontakt -->
                 <div class="flex items-start gap-4">
-                    <div class="bg-white/10 p-3 flex-shrink-0">
+                    <div class="bg-white/10 p-3 flex-shrink-0 rounded-md">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                     </div>
                     <div>
                         <h4 class="font-bold text-white text-lg mb-2 tracking-wide uppercase">Kontakt</h4>
                         <ul class="space-y-3">
-                            <li><a href="tel:+420731071779" class="hover:text-white hover:underline transition-all">+420 731 071 779</a></li>
+                            <li><a href="tel:+420775945023" class="hover:text-white hover:underline transition-all">+420 775 945 023</a></li>
                             <li class="pt-1">
-                                <a href="https://www.instagram.com/malir_tom/" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline transition-all flex items-center gap-2">
+                                <a href="https://www.facebook.com/p/MT-Pneuservis-100063885046757/" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline transition-all flex items-center gap-2">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                    MT Pneuservis
+                                </a>
+                            </li>
+                            <li class="pt-1">
+                                <a href="https://www.instagram.com/mt_pneuservis/" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline transition-all flex items-center gap-2">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                                    @malir_tom
+                                    @mt_pneuservis
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Fakturační údaje -->
+                <!-- Otevírací doba -->
                 <div class="flex items-start gap-4">
-                    <div class="bg-white/10 p-3 flex-shrink-0">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <div class="bg-white/10 p-3 flex-shrink-0 rounded-md">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <div>
-                        <h4 class="font-bold text-white text-lg mb-2 tracking-wide uppercase">Firemní údaje</h4>
-                        <p class="leading-relaxed">IČ: 23011181</p>
+                        <h4 class="font-bold text-white text-lg mb-2 tracking-wide uppercase">Otevírací doba</h4>
+                        <p class="leading-relaxed">Otevřeno 24 hodin</p>
                     </div>
                 </div>
 
             </div>
             
             <!-- Mapa -->
-            <div class="w-full h-80 md:h-96 mt-16">
+            <div class="w-full h-80 md:h-96 mt-16 rounded-lg overflow-hidden">
                 <iframe 
-                    src="https://maps.google.com/maps?q=S%C3%ADdli%C5%A1t%C4%9B%20Ple%C5%A1ivec%20361,%20%C4%8Cesk%C3%BD%20Krumlov&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                    src="https://maps.google.com/maps?q=MT%20Cars,%20Kralupy%20nad%20Vltavou&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                     width="100%" 
                     height="100%" 
                     style="border:0;" 
@@ -336,8 +337,8 @@
                 </iframe>
             </div>
             
-            <div class="mt-16 pt-8 border-t border-blue-800 text-center text-sm text-blue-200">
-                <p>&copy; 2026 Tomáš Jandus. Všechna práva vyhrazena.</p>
+            <div class="mt-16 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
+                <p>&copy; 2026 MT Pneuservis. Všechna práva vyhrazena.</p>
             </div>
         </div>
     </footer>
