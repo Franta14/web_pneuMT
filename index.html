@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MT Pneuservis</title>
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=1920&q=80">
+    <title>Olinka Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
         html { scroll-behavior: smooth !important; }
         body { font-family: 'Inter', sans-serif; }
+        .font-heading { font-family: 'Playfair Display', serif; }
     </style>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#1f1b1c',
+                        primary: '#bc8b8b', /* Dusty rose */
+                        primaryDark: '#a37171'
                     }
                 }
             }
@@ -25,12 +26,14 @@
 </head>
 <body class="antialiased bg-white text-slate-800">
 
-    <!-- Horní navigace přes úvodní obrázek -->
+    <!-- Horní navigace přes úvodní obrázek/video -->
     <header class="relative min-h-screen flex flex-col justify-between isolate overflow-hidden">
-        <!-- Optimizované načítání pozadí jako klasický obrázek (zabrání zasekávání při scrollování nahoru) -->
-        <img src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=1920&q=80" alt="Pneuservis" class="absolute inset-0 w-full h-full object-cover -z-20" loading="eager" decoding="sync">
+        <!-- Pozadí video -->
+        <video autoplay loop muted playsinline poster="764421047_17896267185565337_3648295306264643539_n.jpg" class="absolute inset-0 w-full h-full object-cover -z-20">
+            <source src="AQPtN_L9LgLJirSJ7dxH6Qca1O_VnFGMAcU0tJ1JVj90Rpl-KDSVnGPMS08y_XfmBv6A0x6qph-7nrx7SP90agWLakWxFGH5BGa1-MI.mp4" type="video/mp4">
+        </video>
         <!-- Tmavý překryv pro dokonalou čitelnost textu -->
-        <div class="absolute inset-0 bg-black/50 -z-10"></div>
+        <div class="absolute inset-0 bg-black/40 -z-10"></div>
 
         <!-- Plovoucí navigační lišta, zcela průhledná -->
         <nav class="relative z-50 w-full bg-transparent">
@@ -38,10 +41,8 @@
                 <div class="flex items-center justify-between h-20">
                     
                     <!-- Logo / Název firmy -->
-                    <a href="#" class="flex items-center gap-3 text-lg sm:text-xl md:text-2xl font-bold text-white tracking-widest uppercase hover:text-gray-300 transition-colors">
-                        <!-- Zde je napojené logo z adresáře -->
-                        <img src="icon.jpg" alt="Logo MT Pneuservis" class="h-10 w-auto rounded-md">
-                        MT Pneuservis
+                    <a href="#" class="flex items-center gap-3 text-2xl md:text-3xl font-heading font-bold text-white tracking-wider hover:text-gray-300 transition-colors">
+                        Olinka Studio
                     </a>
 
                     <!-- Tlačítko mobilního menu -->
@@ -52,56 +53,58 @@
                     </button>
                     
                     <!-- Navigační odkazy pro desktop -->
-                    <ul class="hidden lg:flex items-center space-x-8 text-sm md:text-base font-semibold text-white/95">
-                        <li><a href="#o-mne" class="hover:text-gray-300 transition-colors">O nás</a></li>
-                        <li><a href="#sluzby" class="hover:text-gray-300 transition-colors">Služby</a></li>
-                        <li><a href="#reference" class="hover:text-gray-300 transition-colors">Reference</a></li>
-                        <li><a href="#cenik" class="hover:text-gray-300 transition-colors">Ceník</a></li>
-                        <li><a href="#kontakt" class="hover:text-gray-300 transition-colors">Kontakt</a></li>
+                    <ul class="hidden lg:flex items-center space-x-8 text-sm md:text-base font-medium text-white/95">
+                        <li><a href="#o-mne" class="hover:text-primary transition-colors">O nás</a></li>
+                        <li><a href="#sluzby" class="hover:text-primary transition-colors">Služby</a></li>
+                        <li><a href="#galerie" class="hover:text-primary transition-colors">Fotogalerie</a></li>
+                        <li><a href="#reference" class="hover:text-primary transition-colors">Reference</a></li>
+                        <li><a href="#cenik" class="hover:text-primary transition-colors">Ceník</a></li>
+                        <li><a href="#kontakt" class="hover:text-primary transition-colors">Kontakt</a></li>
                     </ul>
                 </div>
 
                 <!-- Mobilní rozbalovací menu -->
-                <div id="mobile-menu" class="hidden lg:hidden pb-6 pt-4">
-                    <ul class="flex flex-col space-y-4 text-base font-semibold text-white/90">
-                        <li><a href="#o-mne" class="mobile-nav-link block hover:text-gray-300">O nás</a></li>
-                        <li><a href="#sluzby" class="mobile-nav-link block hover:text-gray-300">Služby</a></li>
-                        <li><a href="#reference" class="mobile-nav-link block hover:text-gray-300">Reference</a></li>
-                        <li><a href="#cenik" class="mobile-nav-link block hover:text-gray-300">Ceník</a></li>
-                        <li><a href="#kontakt" class="mobile-nav-link block hover:text-gray-300">Kontakt</a></li>
+                <div id="mobile-menu" class="hidden lg:hidden pb-6 pt-4 bg-black/80 backdrop-blur-md rounded-b-xl px-4 absolute left-0 w-full">
+                    <ul class="flex flex-col space-y-4 text-base font-medium text-white">
+                        <li><a href="#o-mne" class="mobile-nav-link block hover:text-primary">O nás</a></li>
+                        <li><a href="#sluzby" class="mobile-nav-link block hover:text-primary">Služby</a></li>
+                        <li><a href="#galerie" class="mobile-nav-link block hover:text-primary">Fotogalerie</a></li>
+                        <li><a href="#reference" class="mobile-nav-link block hover:text-primary">Reference</a></li>
+                        <li><a href="#cenik" class="mobile-nav-link block hover:text-primary">Ceník</a></li>
+                        <li><a href="#kontakt" class="mobile-nav-link block hover:text-primary">Kontakt</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
         <!-- Hlavní středový obsah Hero sekce -->
-        <div class="relative z-10 flex-grow flex items-center justify-center text-center px-4 py-16">
+        <div class="relative z-10 flex-grow flex items-center justify-center text-center px-4 py-16 h-[calc(100vh-80px)]">
             <div class="max-w-4xl mx-auto">
                 <h1 class="text-white drop-shadow-lg">
-                    <span class="block text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight mb-2">MT Pneuservis</span>
-                    <span class="block text-xl sm:text-2xl md:text-3xl font-light uppercase tracking-widest text-gray-200">Kralupy nad Vltavou | +420 775 945 023</span>
+                    <span class="block text-5xl sm:text-6xl md:text-8xl font-heading font-bold mb-4">Olinka Studio</span>
+                    <span class="block text-lg sm:text-xl md:text-2xl font-light tracking-widest text-white/90">Kladno | +420 771 535 888</span>
                 </h1>
-                <p class="mt-6 text-xl md:text-2xl text-white/90 drop-shadow-md font-light">
-                    Neváhejte zavolat a domluvíme si termín na váš automobil v našem novém pneuservisu.
+                <p class="mt-6 text-lg md:text-xl text-white/90 drop-shadow-md font-light max-w-2xl mx-auto">
+                    Ve studiu se staráme o krásu a pohodu – nabízíme profesionální design nehtů, péči o pedikúru a prodlužování i úpravu řas.
                 </p>
                 
                 <!-- Linka pod nadpisem -->
-                <div class="w-24 h-1.5 bg-gray-800 mx-auto my-6"></div>
+                <div class="w-24 h-1 bg-primary mx-auto my-8"></div>
                 
                 <!-- Tlačítka pro kontakt -->
-                <div class="mt-8">
-                    <a href="#kontakt" class="inline-block px-8 py-3 bg-transparent hover:bg-white/15 text-white font-medium border border-white/50 backdrop-blur-sm transition-all" style="margin: 5px;">
-                        Kontaktujte nás
+                <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#kontakt" class="w-full sm:w-auto inline-block px-8 py-3 bg-primary hover:bg-primaryDark text-white font-medium transition-all rounded-sm shadow-lg">
+                        Rezervovat termín
                     </a>
-                    <a href="#reference" class="inline-block px-8 py-3 bg-transparent hover:bg-white/15 text-white font-medium border border-white/50 backdrop-blur-sm transition-all" style="margin: 5px; background-color: rgba(255,255,255,0.1);">
-                        Hodnocení zákazníků
+                    <a href="#galerie" class="w-full sm:w-auto inline-block px-8 py-3 bg-white/10 hover:bg-white/20 text-white font-medium border border-white/50 backdrop-blur-sm transition-all rounded-sm">
+                        Prohlédnout práci
                     </a>
                 </div>
             </div>
         </div>
 
         <!-- Spodní indikátor / prázdný prostor -->
-        <div class="relative z-10 pb-8 text-center">
+        <div class="absolute bottom-8 left-0 right-0 z-10 pb-8 text-center">
             <a href="#o-mne" class="text-white/70 hover:text-white inline-block animate-bounce transition-colors" aria-label="Přejít na obsah">
                 <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -113,71 +116,75 @@
     <main>
         <!-- O mně -->
         <section id="o-mne" class="py-16 md:py-24 bg-white">
-            <div class="max-w-3xl mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 uppercase tracking-wide">O nás</h2>
-                <div class="w-16 h-1 bg-gray-800 mx-auto mb-8"></div>
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4 tracking-wide">O nás</h2>
+                <div class="w-16 h-1 bg-primary mx-auto mb-8"></div>
                 
-                <div class="space-y-6 text-lg md:text-xl leading-relaxed text-slate-600">
+                <div class="space-y-6 text-lg md:text-xl leading-relaxed text-slate-600 font-light">
                     <p>
-                        Jsme nový pneuservis a autoservis v Kralupech nad Vltavou. Naším cílem je poskytovat rychlé a kvalitní služby pro váš vůz.
+                        Ve studiu se staráme o krásu a pohodu – nabízíme profesionální design nehtů, péči o pedikúru a prodlužování i úpravu řas. Naším cílem je, abyste se u nás cítily příjemně a odcházely s úsměvem a sebevědomím.
+                    </p>
+                    <p>
+                        Zakládáme si na individuálním přístupu, čistém a relaxačním prostředí a použití těch nejkvalitnějších materiálů.
                     </p>
                 </div>
             </div>
         </section>
 
         <!-- Služby -->
-        <section id="sluzby" class="py-12 md:py-16 bg-slate-50 border-y border-slate-200/80">
+        <section id="sluzby" class="py-16 md:py-24 bg-slate-50 border-y border-slate-200/80">
             <div class="max-w-6xl mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 text-center uppercase tracking-wide">Naše služby</h2>
-                <div class="w-16 h-1 bg-gray-800 mx-auto mb-10"></div>
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4 text-center tracking-wide">Naše služby</h2>
+                <div class="w-16 h-1 bg-primary mx-auto mb-12"></div>
                 
-                <div class="flex flex-col md:flex-row gap-12 lg:gap-16 items-start">
+                <div class="flex flex-col md:flex-row gap-12 lg:gap-16 items-center">
                     <!-- Obrázek u služeb -->
                     <div class="w-full md:w-1/2">
-                        <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&w=800&q=80" alt="Servis automobilů" class="w-full h-auto border border-slate-200 object-cover rounded-lg shadow-sm">
+                        <img src="764439977_17896267161565337_3350929001593370439_n.jpg" alt="Design nehtů a řasy" class="w-full h-[500px] object-cover rounded-sm shadow-lg">
                     </div>
                     
                     <!-- Texty a odrážky služeb -->
-                    <div class="w-full md:w-1/2 space-y-6 mt-4 md:mt-0">
+                    <div class="w-full md:w-1/2 space-y-10 mt-4 md:mt-0">
                         
-                        <!-- Blok Pneuservis -->
+                        <!-- Blok Nehty -->
                         <div>
-                            <h3 class="text-xl md:text-2xl font-bold text-primary mb-3 uppercase tracking-wide flex items-center gap-3">
-                                <span class="w-2.5 h-2.5 bg-gray-800 inline-block"></span>
-                                Pneuservis
+                            <h3 class="text-2xl font-heading font-bold text-gray-900 mb-3 tracking-wide flex items-center gap-3">
+                                <span class="w-2.5 h-2.5 bg-primary rounded-full inline-block"></span>
+                                Nehtový design
                             </h3>
-                            <ul class="space-y-2 text-base md:text-lg text-slate-600 list-disc ml-6">
-                                <li>Pneuservis</li>
+                            <ul class="space-y-2 text-base md:text-lg text-slate-600 ml-6">
+                                <li>• Gelová modeláž nehtů</li>
+                                <li>• Doplnění gelových nehtů</li>
+                                <li>• Gel lak (zpevnění přírodních nehtů)</li>
+                                <li>• Klasická manikúra</li>
+                                <li>• Nail art a zdobení</li>
                             </ul>
                         </div>
                         
-                        <!-- Blok Autoservis -->
+                        <!-- Blok Pedikúra -->
                         <div>
-                            <h3 class="text-xl md:text-2xl font-bold text-primary mb-3 uppercase tracking-wide flex items-center gap-3">
-                                <span class="w-2.5 h-2.5 bg-gray-800 inline-block"></span>
-                                Běžný servis automobilů
+                            <h3 class="text-2xl font-heading font-bold text-gray-900 mb-3 tracking-wide flex items-center gap-3">
+                                <span class="w-2.5 h-2.5 bg-primary rounded-full inline-block"></span>
+                                Pedikúra
                             </h3>
-                            <ul class="space-y-2 text-base md:text-lg text-slate-600 list-disc ml-6">
-                                <li>Servis automobilů</li>
-                                <li>Výměna oleje a filtrů</li>
-                                <li>Výměna brzdových destiček</li>
-                                <li>Výměna brzdové kapaliny</li>
-                                <li>Výměna žárovky</li>
+                            <ul class="space-y-2 text-base md:text-lg text-slate-600 ml-6">
+                                <li>• Klasická pedikúra</li>
+                                <li>• Přístrojová (suchá) pedikúra</li>
+                                <li>• Úprava nehtů a lakování</li>
+                                <li>• Ošetření ztvrdlé kůže</li>
                             </ul>
                         </div>
 
-                        <!-- Blok Diagnostika a další -->
+                        <!-- Blok Řasy -->
                         <div>
-                            <h3 class="text-xl md:text-2xl font-bold text-primary mb-3 uppercase tracking-wide flex items-center gap-3">
-                                <span class="w-2.5 h-2.5 bg-gray-800 inline-block"></span>
-                                Ostatní odborné práce
+                            <h3 class="text-2xl font-heading font-bold text-gray-900 mb-3 tracking-wide flex items-center gap-3">
+                                <span class="w-2.5 h-2.5 bg-primary rounded-full inline-block"></span>
+                                Prodlužování a úprava řas
                             </h3>
-                            <ul class="space-y-2 text-base md:text-lg text-slate-600 list-disc ml-6">
-                                <li>Autodiagnostika</li>
-                                <li>Servis klimatizace</li>
-                                <li>Výměna rozvodů motoru</li>
-                                <li>Výměna autobaterií</li>
-                                <li>Mechanické práce</li>
+                            <ul class="space-y-2 text-base md:text-lg text-slate-600 ml-6">
+                                <li>• Prodlužování řas (metoda řasa na řasu, volume)</li>
+                                <li>• Lash lifting a botox</li>
+                                <li>• Úprava a barvení obočí</li>
                             </ul>
                         </div>
                     </div>
@@ -185,81 +192,80 @@
             </div>
         </section>
 
-        <!-- Reference -->
-        <section id="reference" class="py-16 md:py-24 bg-white">
+        <!-- Fotogalerie -->
+        <section id="galerie" class="py-16 md:py-24 bg-white">
             <div class="max-w-6xl mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-2 text-center uppercase tracking-wide">Hodnocení zákazníků</h2>
-                <p class="text-center text-lg text-slate-600 mb-4">4,9 z 5 ⭐ (na základě 77 recenzí na Google)</p>
-                <div class="w-16 h-1 bg-gray-800 mx-auto mb-10"></div>
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4 text-center tracking-wide">Fotogalerie</h2>
+                <div class="w-16 h-1 bg-primary mx-auto mb-10"></div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto">
-                    <!-- Recenze 1 -->
-                    <div class="bg-slate-50 border border-slate-200 p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2 border-b border-slate-200 pb-2 flex items-center justify-between">
-                                Zbyněk Vyhlas
-                                <span class="text-yellow-500 text-sm">⭐⭐⭐⭐⭐</span>
-                            </h3>
-                            <p class="text-slate-600 italic mt-4">"Rychlost, pohoda, skvělá cena. Absolutní spokojenost."</p>
-                        </div>
-                    </div>
-
-                    <!-- Recenze 2 -->
-                    <div class="bg-slate-50 border border-slate-200 p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2 border-b border-slate-200 pb-2 flex items-center justify-between">
-                                Sandra Malcova
-                                <span class="text-yellow-500 text-sm">⭐⭐⭐⭐⭐</span>
-                            </h3>
-                            <p class="text-slate-600 italic mt-4">"Wow, bezkonkurenční záchrana v podobě vstřícného a šikovného servismana! Dneska jsem píchla a na místě opraveno. Takový vstřícný přístup už se málokdy vidí. Servis doporučuji všemi deseti 👍"</p>
-                        </div>
-                    </div>
-
-                    <!-- Recenze 3 -->
-                    <div class="bg-slate-50 border border-slate-200 p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2 border-b border-slate-200 pb-2 flex items-center justify-between">
-                                Martin Bayer
-                                <span class="text-yellow-500 text-sm">⭐⭐⭐⭐⭐</span>
-                            </h3>
-                            <p class="text-slate-600 italic mt-4">"Děkuji za rychlou a profesionální reakci. Potřeboval jsem pomoc v neděli a vše proběhlo naprosto bez problémů. Skvělá domluva, rychlá práce a ochota. Mohu jen doporučit!"</p>
-                        </div>
-                    </div>
-
-                    <!-- Recenze 4 -->
-                    <div class="bg-slate-50 border border-slate-200 p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2 border-b border-slate-200 pb-2 flex items-center justify-between">
-                                Tomas Kubik
-                                <span class="text-yellow-500 text-sm">⭐⭐⭐⭐⭐</span>
-                            </h3>
-                            <p class="text-slate-600 italic mt-4">"Skvělý přístup. V sobotu večer jsem požádal o převážení kol, protože auto přenášelo značné vibrace. Po pár minutách jsem obdržel zprávu s termínem hned v neděli ráno. Kola mi majitel zkontroloval, vyvážil a vibrace jsou pryč. Na jaře se zastavím vyměnit na letní! Moc díky!"</p>
-                        </div>
-                    </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                    <img src="573552713_17853803721565337_5359705737531261727_n.jpg" alt="Ukázka práce 1" class="w-full h-64 object-cover rounded-sm shadow hover:opacity-90 transition-opacity cursor-pointer">
+                    <img src="643543372_17868920541565337_6408339650369786101_n.jpg" alt="Ukázka práce 2" class="w-full h-64 object-cover rounded-sm shadow hover:opacity-90 transition-opacity cursor-pointer">
+                    <img src="764421047_17896267185565337_3648295306264643539_n.jpg" alt="Ukázka práce 3" class="w-full h-64 object-cover rounded-sm shadow hover:opacity-90 transition-opacity cursor-pointer">
+                    <img src="764439977_17896267161565337_3350929001593370439_n.jpg" alt="Ukázka práce 4" class="w-full h-64 object-cover rounded-sm shadow hover:opacity-90 transition-opacity cursor-pointer">
                 </div>
-                
                 <div class="mt-12 text-center">
-                    <a href="https://www.google.com/maps/place/MT+Cars/@50.2373187,14.2899667,17z/data=!4m8!3m7!1s0x470bc52a967a6de3:0x9bf31e12bd7b17f4!8m2!3d50.2373187!4d14.2899667!9m1!1b1!16s%2Fg%2F11q1r4w_wg?entry=ttu&g_ep=EgoyMDI2MTAwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 bg-gray-800 hover:bg-gray-900 text-white font-medium rounded shadow-sm hover:shadow-md transition-all">
-                        Zobrazit všechny recenze na Googlu
+                    <a href="https://www.instagram.com/olinkastudio/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-3 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded-sm shadow-sm hover:shadow-md transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        Sledujte nás na Instagramu pro více fotek
                     </a>
                 </div>
             </div>
         </section>
 
+        <!-- Reference -->
+        <section id="reference" class="py-16 md:py-24 bg-slate-50">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-2 text-center tracking-wide">Hodnocení zákazníků</h2>
+                <p class="text-center text-lg text-slate-600 mb-4">5,0 Fantastické z 5 ⭐ (na základě recenzí na Google)</p>
+                <div class="w-16 h-1 bg-primary mx-auto mb-12"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto">
+                    <!-- Recenze 1 -->
+                    <div class="bg-white border border-slate-100 p-8 rounded-sm shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-1 text-yellow-400 mb-4 text-sm">⭐⭐⭐⭐⭐</div>
+                        <p class="text-slate-600 italic mb-6">"Skvělý přístup, krásné prostředí a precizní práce! Nehty mi drží jako nikdy a vždy odcházím naprosto spokojená. Doporučuji!"</p>
+                        <h3 class="font-bold text-gray-900">— Petra N.</h3>
+                    </div>
+
+                    <!-- Recenze 2 -->
+                    <div class="bg-white border border-slate-100 p-8 rounded-sm shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-1 text-yellow-400 mb-4 text-sm">⭐⭐⭐⭐⭐</div>
+                        <p class="text-slate-600 italic mb-6">"Úžasná relaxace při pedikúře. Olinka je moc milá a šikovná. Studio je krásně zařízené a čisté. Určitě přijdu znovu."</p>
+                        <h3 class="font-bold text-gray-900">— Lucie K.</h3>
+                    </div>
+
+                    <!-- Recenze 3 -->
+                    <div class="bg-white border border-slate-100 p-8 rounded-sm shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-1 text-yellow-400 mb-4 text-sm">⭐⭐⭐⭐⭐</div>
+                        <p class="text-slate-600 italic mb-6">"Nejlepší řasy co jsem kdy měla. Vypadají přirozeně a vůbec je necítím. Profesionální přístup od začátku do konce."</p>
+                        <h3 class="font-bold text-gray-900">— Martina H.</h3>
+                    </div>
+
+                    <!-- Recenze 4 -->
+                    <div class="bg-white border border-slate-100 p-8 rounded-sm shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-1 text-yellow-400 mb-4 text-sm">⭐⭐⭐⭐⭐</div>
+                        <p class="text-slate-600 italic mb-6">"Krásné a čisté studio. Chodím sem pravidelně na manikúru a jsem vždy maximálně spokojená. Perfektní servis."</p>
+                        <h3 class="font-bold text-gray-900">— Klára S.</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Ceník -->
-        <section id="cenik" class="py-16 md:py-24 bg-slate-50 border-t border-slate-200">
+        <section id="cenik" class="py-16 md:py-24 bg-white border-t border-slate-100">
             <div class="max-w-3xl mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 uppercase tracking-wide">Ceník</h2>
-                <div class="w-16 h-1 bg-gray-800 mx-auto mb-8"></div>
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4 tracking-wide">Ceník</h2>
+                <div class="w-16 h-1 bg-primary mx-auto mb-8"></div>
                 
                 <div class="mt-8">
-                    <p class="text-xl md:text-2xl text-slate-800 font-semibold leading-relaxed mb-4">
-                        Cena služeb závisí na typu vozidla a rozsahu prací. Kontaktujte nás pro přesnou kalkulaci.
+                    <p class="text-xl md:text-2xl text-gray-900 font-light leading-relaxed mb-4">
+                        Cena služeb závisí na typu a náročnosti procedury. Pro aktuální ceník a volné termíny nás prosím kontaktujte.
                     </p>
 
                     <div class="mt-10">
-                        <a href="#kontakt" class="inline-block px-8 py-3 bg-primary hover:bg-gray-800 text-white font-medium shadow-sm hover:shadow-md transition-all">
-                            Kontaktovat pro nezávaznou domluvu
+                        <a href="#kontakt" class="inline-block px-8 py-3 bg-primary hover:bg-primaryDark text-white font-medium shadow-sm hover:shadow-md transition-all rounded-sm">
+                            Kontaktovat pro domluvu termínu
                         </a>
                     </div>
                 </div>
@@ -269,43 +275,46 @@
     </main>
 
     <!-- Kontakt -->
-    <footer id="kontakt" class="bg-primary text-white py-16">
+    <footer id="kontakt" class="bg-[#2a2626] text-white py-16">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center uppercase tracking-wide">Kontakt</h2>
-            <div class="w-16 h-1 bg-white mx-auto mb-14"></div>
+            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4 text-center tracking-wide">Kontakt</h2>
+            <div class="w-16 h-1 bg-primary mx-auto mb-14"></div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-gray-300">
                 
-                <!-- Adresa -->
+                <!-- Adresa & Firma -->
                 <div class="flex items-start gap-4">
-                    <div class="bg-white/10 p-3 flex-shrink-0 rounded-md">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <div class="bg-white/5 p-3 flex-shrink-0 rounded-full text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                     </div>
                     <div>
-                        <h4 class="font-bold text-white text-lg mb-2 tracking-wide uppercase">Adresa</h4>
-                        <p class="leading-relaxed">Na Husarce 130,<br>278 01 Kralupy nad Vltavou 1</p>
+                        <h4 class="font-bold text-white text-lg mb-2 tracking-wide font-heading">Adresa studia</h4>
+                        <p class="leading-relaxed font-light mb-4">náměstí Sítná 3113<br>272 01 Kladno, Kročehlavy</p>
+                        <h4 class="font-bold text-white text-sm mb-1 tracking-wide opacity-80">Fakturační údaje</h4>
+                        <p class="text-sm opacity-70 font-light">IČO: 23480416<br>Datová schránka: zhzqtsy</p>
                     </div>
                 </div>
 
                 <!-- Kontakt -->
                 <div class="flex items-start gap-4">
-                    <div class="bg-white/10 p-3 flex-shrink-0 rounded-md">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    <div class="bg-white/5 p-3 flex-shrink-0 rounded-full text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                     </div>
                     <div>
-                        <h4 class="font-bold text-white text-lg mb-2 tracking-wide uppercase">Kontakt</h4>
-                        <ul class="space-y-3">
-                            <li><a href="tel:+420775945023" class="hover:text-white hover:underline transition-all">+420 775 945 023</a></li>
-                            <li class="pt-1">
-                                <a href="https://www.facebook.com/p/MT-Pneuservis-100063885046757/" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline transition-all flex items-center gap-2">
+                        <h4 class="font-bold text-white text-lg mb-2 tracking-wide font-heading">Spojení</h4>
+                        <ul class="space-y-3 font-light">
+                            <li><a href="tel:+420771535888" class="hover:text-primary transition-all">+420 771 535 888</a></li>
+                            <li><a href="mailto:olinkastudio@seznam.cz" class="hover:text-primary transition-all">olinkastudio@seznam.cz</a></li>
+                            <li class="pt-2">
+                                <a href="https://www.facebook.com/p/Olinka-Studio-61579879652660/?locale=cs_CZ" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-all flex items-center gap-2">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                                    MT Pneuservis
+                                    Olinka Studio
                                 </a>
                             </li>
                             <li class="pt-1">
-                                <a href="https://www.instagram.com/mt_pneuservis/" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline transition-all flex items-center gap-2">
+                                <a href="https://www.instagram.com/olinkastudio/" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-all flex items-center gap-2">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                                    @mt_pneuservis
+                                    @olinkastudio
                                 </a>
                             </li>
                         </ul>
@@ -314,21 +323,29 @@
 
                 <!-- Otevírací doba -->
                 <div class="flex items-start gap-4">
-                    <div class="bg-white/10 p-3 flex-shrink-0 rounded-md">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <div class="bg-white/5 p-3 flex-shrink-0 rounded-full text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <div>
-                        <h4 class="font-bold text-white text-lg mb-2 tracking-wide uppercase">Otevírací doba</h4>
-                        <p class="leading-relaxed">Otevřeno 24 hodin</p>
+                        <h4 class="font-bold text-white text-lg mb-2 tracking-wide font-heading">Otevírací doba</h4>
+                        <ul class="leading-relaxed font-light space-y-1">
+                            <li class="flex justify-between w-40"><span>Pondělí</span><span>8:00 – 19:00</span></li>
+                            <li class="flex justify-between w-40"><span>Úterý</span><span>8:00 – 19:00</span></li>
+                            <li class="flex justify-between w-40"><span>Středa</span><span>8:00 – 19:00</span></li>
+                            <li class="flex justify-between w-40"><span>Čtvrtek</span><span>8:00 – 19:00</span></li>
+                            <li class="flex justify-between w-40"><span>Pátek</span><span>8:00 – 19:00</span></li>
+                            <li class="flex justify-between w-40"><span>Sobota</span><span>9:00 – 18:00</span></li>
+                            <li class="flex justify-between w-40"><span>Neděle</span><span>9:00 – 18:00</span></li>
+                        </ul>
                     </div>
                 </div>
 
             </div>
             
             <!-- Mapa -->
-            <div class="w-full h-80 md:h-96 mt-16 rounded-lg overflow-hidden">
+            <div class="w-full h-80 md:h-96 mt-16 rounded-sm overflow-hidden">
                 <iframe 
-                    src="https://maps.google.com/maps?q=MT%20Cars,%20Kralupy%20nad%20Vltavou&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                    src="https://maps.google.com/maps?q=50.136996,14.1014571&t=&z=16&ie=UTF8&iwloc=&output=embed" 
                     width="100%" 
                     height="100%" 
                     style="border:0;" 
@@ -337,8 +354,8 @@
                 </iframe>
             </div>
             
-            <div class="mt-16 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
-                <p>&copy; 2026 MT Pneuservis. Všechna práva vyhrazena.</p>
+            <div class="mt-16 pt-8 border-t border-white/10 text-center text-sm text-gray-500 font-light">
+                <p>&copy; 2026 Olinka Studio. Všechna práva vyhrazena.</p>
             </div>
         </div>
     </footer>
