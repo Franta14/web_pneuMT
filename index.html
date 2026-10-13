@@ -146,9 +146,9 @@
                 <div class="w-16 h-1 bg-red-600 mx-auto mb-10"></div>
                 
                 <div class="flex flex-col md:flex-row gap-12 lg:gap-16 items-start">
-                    <!-- Reálný obrázek z dílny -->
+                    <!-- Obrázek -->
                     <div class="w-full md:w-1/2">
-                        <img src="foto-klimatizace-sluzby.jpg" alt="Dílna Racing Spirit Velvary" class="w-full h-auto border border-slate-200 object-cover rounded-lg shadow-sm">
+                        <img src="foto-klimatizace-sluzby.jpg" alt="Racing Spirit" class="w-full h-auto border border-slate-200 object-cover rounded-lg shadow-sm">
                     </div>
                     
                     <!-- Texty a odrážky služeb -->
@@ -251,34 +251,28 @@
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     
-                    <!-- Fotka 1: Zázemí dílny -->
-                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow border border-slate-200 cursor-pointer group" onclick="openLightbox('hlavni-fotka.jpg', 'Dílna Racing Spirit Velvary')">
-                        <img src="hlavni-fotka.jpg" alt="Dílna Racing Spirit Velvary" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow border border-slate-200 cursor-pointer group" onclick="openLightbox('hlavni-fotka.jpg')">
+                        <img src="hlavni-fotka.jpg" alt="Racing Spirit" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
 
-                    <!-- Fotka 2: Plnění a servis klimatizace / ATF Touch -->
-                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow border border-slate-200 cursor-pointer group" onclick="openLightbox('foto-klimatizace-sluzby.jpg', 'Plnění a servis MARCO ATF Touch')">
-                        <img src="foto-klimatizace-sluzby.jpg" alt="Plnění a servis MARCO ATF Touch" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow border border-slate-200 cursor-pointer group" onclick="openLightbox('foto-klimatizace-sluzby.jpg')">
+                        <img src="foto-klimatizace-sluzby.jpg" alt="Racing Spirit" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
 
-                    <!-- Fotka 3: Výměna rozvodů motoru -->
-                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow border border-slate-200 cursor-pointer group" onclick="openLightbox('foto-rozvody.jpg', 'Výměna rozvodů motoru s aretací')">
-                        <img src="foto-rozvody.jpg" alt="Výměna rozvodů motoru s aretací" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow border border-slate-200 cursor-pointer group" onclick="openLightbox('foto-rozvody.jpg')">
+                        <img src="foto-rozvody.jpg" alt="Racing Spirit" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
 
-                    <!-- Fotka 4: Mechanické práce na motoru -->
-                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow border border-slate-200 cursor-pointer group" onclick="openLightbox('foto-motor-prace.jpg', 'Mechanické práce na motoru')">
-                        <img src="foto-motor-prace.jpg" alt="Mechanické práce na motoru" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow border border-slate-200 cursor-pointer group" onclick="openLightbox('foto-motor-prace.jpg')">
+                        <img src="foto-motor-prace.jpg" alt="Racing Spirit" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
 
-                    <!-- Fotka 5: Servis převodovky -->
-                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow border border-slate-200 cursor-pointer group" onclick="openLightbox('foto-prevodovka.jpg', 'Opravy a servis převodovek')">
-                        <img src="foto-prevodovka.jpg" alt="Opravy a servis převodovek" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow border border-slate-200 cursor-pointer group" onclick="openLightbox('foto-prevodovka.jpg')">
+                        <img src="foto-prevodovka.jpg" alt="Racing Spirit" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
 
-                    <!-- Fotka 6: Montáž kompletního motoru -->
-                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow border border-slate-200 cursor-pointer group" onclick="openLightbox('foto-motor-montaz.jpg', 'Generální opravy a montáž motorů')">
-                        <img src="foto-motor-montaz.jpg" alt="Generální opravy a montáž motorů" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow border border-slate-200 cursor-pointer group" onclick="openLightbox('foto-motor-montaz.jpg')">
+                        <img src="foto-motor-montaz.jpg" alt="Racing Spirit" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
 
                 </div>
@@ -289,8 +283,7 @@
         <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4 backdrop-blur-sm" onclick="closeLightbox(event)">
             <button onclick="closeLightbox(event)" class="absolute top-6 right-6 text-white text-3xl font-bold p-2 hover:text-red-400 focus:outline-none" aria-label="Zavřít">&times;</button>
             <div class="max-w-4xl max-h-[85vh] flex flex-col items-center">
-                <img id="lightbox-img" src="" alt="Ukázka práce" class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl">
-                <p id="lightbox-caption" class="text-white text-sm mt-3 font-medium tracking-wide"></p>
+                <img id="lightbox-img" src="" alt="Racing Spirit" class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl">
             </div>
         </div>
 
@@ -436,7 +429,7 @@
                 </div>
                 
                 <div class="mt-12 text-center">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Racing+Spirit+Na+Br%C4%8Dkov%C4%9B+133+Velvary" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 bg-gray-800 hover:bg-gray-900 text-white font-medium rounded shadow-sm hover:shadow-md transition-all">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Racing+Spirit+Velvary" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 bg-gray-800 hover:bg-gray-900 text-white font-medium rounded shadow-sm hover:shadow-md transition-all">
                         Zobrazit profil a recenze na Googlu
                     </a>
                 </div>
@@ -450,11 +443,8 @@
                 <div class="w-16 h-1 bg-red-600 mx-auto mb-8"></div>
                 
                 <div class="mt-8">
-                    <p class="text-xl md:text-2xl text-slate-800 font-semibold leading-relaxed mb-3">
-                        Ceny služeb jsou dle domluvy a rozsahu prací.
-                    </p>
-                    <p class="text-slate-600 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
-                        Před každou opravou s vámi probereme předpokládaný rozsah i cenu. Žádné nečekané výdaje ani zbytečné výměny dílů.
+                    <p class="text-xl md:text-2xl text-slate-800 font-semibold leading-relaxed mb-4">
+                        Ceny služeb jsou dle domluvy.
                     </p>
 
                     <div class="mt-10">
@@ -488,7 +478,7 @@
                             Na Brčkově 133<br>
                             273 24 Velvary
                         </p>
-                        <a href="https://maps.google.com/?q=Na+Br%C4%8Dkov%C4%9B+133,+273+24+Velvary" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-sm text-red-400 hover:text-red-300 hover:underline">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Racing+Spirit+Velvary" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-sm text-red-400 hover:text-red-300 hover:underline">
                             Navigovat &rarr;
                         </a>
                     </div>
@@ -568,8 +558,8 @@
             <!-- Mapa -->
             <div class="w-full h-80 md:h-96 mt-14 rounded-lg overflow-hidden border border-gray-700 shadow-md">
                 <iframe 
-                    title="Mapa - Racing Spirit, Na Brčkově 133, 273 24 Velvary"
-                    src="https://maps.google.com/maps?q=Na%20Br%C4%8Dkov%C4%9B%20133,%2027324%20Velvary&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                    title="Mapa - Racing Spirit Velvary"
+                    src="https://maps.google.com/maps?q=Racing%20Spirit%20Velvary&t=&z=16&ie=UTF8&iwloc=&output=embed" 
                     width="100%" 
                     height="100%" 
                     style="border:0;" 
@@ -602,12 +592,10 @@
         });
 
         // Lightbox pro galerii
-        function openLightbox(src, caption) {
+        function openLightbox(src) {
             const lightbox = document.getElementById('lightbox');
             const img = document.getElementById('lightbox-img');
-            const cap = document.getElementById('lightbox-caption');
             img.src = src;
-            cap.textContent = caption || '';
             lightbox.classList.remove('hidden');
             lightbox.classList.add('flex');
             document.body.style.overflow = 'hidden';
