@@ -1,620 +1,502 @@
 <!DOCTYPE html>
-<html lang="cs" class="scroll-smooth">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Racing Spirit | Autoservis a pneuservis Velvary</title>
-    <meta name="description" content="Autoservis a pneuservis Racing Spirit ve Velvarech. Profesionální servis, diagnostika, plnění klimatizace, příprava na STK i montáž autodoplňků. Na Brčkově 133, Velvary. Tel: +420 725 588 112.">
-    
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2317171a'/><path d='M25 80 L55 20 L75 20 L45 80 Z' fill='%23dc2626'/><path d='M50 80 L80 20 L90 20 L60 80 Z' fill='%232563eb'/></svg>">
-    <link rel="preload" as="image" href="hlavni-fotka.jpg">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        html { scroll-behavior: smooth !important; }
-        body { font-family: 'Inter', sans-serif; }
-    </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#17171a',
-                        racing: '#dc2626',
-                        racingBlue: '#2563eb'
-                    }
-                }
-            }
-        }
-    </script>
+    <title>Řemeslná Dílna &amp; Výroba | Zakázkové práce a servis</title>
+    <meta name="description" content="Poctivé řemeslo, zakázková výroba, montáže a technický servis. Férové ceny, pevné termíny a kvalitní materiály.">
+
+    <!-- Typografie: Inter a JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Čisté Vanilla CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="antialiased bg-white text-slate-800">
+<body>
 
-    <!-- Horní navigace přes úvodní obrázek -->
-    <header class="relative min-h-screen flex flex-col justify-between isolate overflow-hidden">
-        <!-- Pozadí fotka se servisem -->
-        <img src="hlavni-fotka.jpg" alt="Autoservis a pneuservis Racing Spirit Velvary" class="absolute inset-0 w-full h-full object-cover -z-20" loading="eager" decoding="sync">
-        <!-- Tmavý překryv pro dokonalou čitelnost textu -->
-        <div class="absolute inset-0 bg-black/65 -z-10"></div>
+    <!-- HLAVNÍ NAVIGACE (BEZ HORNÍ ČERNÉ LIŠTY) -->
+    <header class="site-header">
+        <div class="container nav-container">
+            
+            <a href="#" class="brand-block">
+                <span class="brand-title">Řemeslná Dílna</span>
+                <span class="brand-subtitle">[ Výroba · Montáže · Servis ]</span>
+            </a>
 
-        <!-- Plovoucí navigační lišta, zcela průhledná -->
-        <nav class="relative z-50 w-full bg-transparent">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between h-20">
-                    
-                    <!-- Název firmy bez ikonek -->
-                    <a href="#" class="text-xl sm:text-2xl font-extrabold text-white tracking-widest uppercase hover:text-red-400 transition-colors">
-                        Racing Spirit
-                    </a>
+            <!-- Navigační menu -->
+            <nav class="main-nav" aria-label="Hlavní navigace">
+                <ul class="nav-links">
+                    <li><a href="#o-nas" class="nav-link">01. O nás</a></li>
+                    <li><a href="#sluzby" class="nav-link">02. Služby</a></li>
+                    <li><a href="#reference" class="nav-link">03. Ukázky práce</a></li>
+                    <li><a href="#cenik" class="nav-link">04. Ceník</a></li>
+                    <li><a href="#kontakt" class="nav-link">05. Kontakt</a></li>
+                </ul>
+            </nav>
 
-                    <!-- Tlačítko mobilního menu -->
-                    <button id="mobile-menu-btn" type="button" class="lg:hidden text-white hover:text-gray-300 focus:outline-none p-2" aria-label="Menu">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                    
-                    <!-- Navigační odkazy pro desktop -->
-                    <ul class="hidden lg:flex items-center space-x-8 text-sm md:text-base font-semibold text-white/95">
-                        <li><a href="#o-nas" class="hover:text-red-400 transition-colors">O nás</a></li>
-                        <li><a href="#sluzby" class="hover:text-red-400 transition-colors">Služby</a></li>
-                        <li><a href="#galerie" class="hover:text-red-400 transition-colors">Naše práce</a></li>
-                        <li><a href="#reference" class="hover:text-red-400 transition-colors">Reference</a></li>
-                        <li><a href="#cenik" class="hover:text-red-400 transition-colors">Ceník</a></li>
-                        <li><a href="#kontakt" class="hover:text-red-400 transition-colors">Kontakt</a></li>
-                    </ul>
-                </div>
+            <!-- Přímý kontakt v záhlaví -->
+            <div style="display: flex; align-items: stretch;">
+                <a href="tel:+420123456789" class="nav-contact-link">
+                    Tel: +420 123 456 789
+                </a>
 
-                <!-- Mobilní rozbalovací menu -->
-                <div id="mobile-menu" class="hidden lg:hidden pb-6 pt-4 bg-black/85 backdrop-blur-md rounded-b-xl px-4 absolute left-0 w-full">
-                    <ul class="flex flex-col space-y-4 text-base font-semibold text-white/90">
-                        <li><a href="#o-nas" class="mobile-nav-link block hover:text-red-400">O nás</a></li>
-                        <li><a href="#sluzby" class="mobile-nav-link block hover:text-red-400">Služby</a></li>
-                        <li><a href="#galerie" class="mobile-nav-link block hover:text-red-400">Naše práce</a></li>
-                        <li><a href="#reference" class="mobile-nav-link block hover:text-red-400">Reference</a></li>
-                        <li><a href="#cenik" class="mobile-nav-link block hover:text-red-400">Ceník</a></li>
-                        <li><a href="#kontakt" class="mobile-nav-link block hover:text-red-400">Kontakt</a></li>
-                    </ul>
-                </div>
+                <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false">
+                    <span></span>
+                </button>
             </div>
-        </nav>
 
-        <!-- Hlavní středový obsah Hero sekce -->
-        <div class="relative z-10 flex-grow flex items-center justify-center text-center px-4 py-16">
-            <div class="max-w-4xl mx-auto">
-                <h1 class="text-white drop-shadow-lg">
-                    <span class="block text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-3">Racing Spirit</span>
-                    <span class="block text-lg sm:text-xl md:text-2xl font-light uppercase tracking-widest text-gray-200">Autoservis &amp; Pneuservis Velvary | +420 725 588 112</span>
-                </h1>
-                <p class="mt-6 text-lg sm:text-xl md:text-2xl text-white/90 drop-shadow-md font-light max-w-3xl mx-auto">
-                    Kvalitní a spolehlivý autoservis pro váš vůz. Rychlé vyřízení, poctivá práce, férové ceny a profesionální přístup.
-                </p>
-                
-                <!-- Červená linka pod nadpisem -->
-                <div class="w-24 h-1.5 bg-red-600 mx-auto my-6"></div>
-                
-                <!-- Tlačítka pro kontakt -->
-                <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-3">
-                    <a href="tel:+420725588112" class="w-full sm:w-auto inline-block px-8 py-3.5 bg-white text-gray-900 font-semibold rounded shadow-md hover:bg-gray-100 transition-all">
-                        Zavolat: 725 588 112
-                    </a>
-                    <a href="#kontakt" class="w-full sm:w-auto inline-block px-8 py-3.5 bg-transparent hover:bg-white/15 text-white font-medium border border-white/60 backdrop-blur-sm transition-all rounded">
-                        Kde nás najdete
-                    </a>
-                    <a href="#reference" class="w-full sm:w-auto inline-block px-8 py-3.5 bg-transparent hover:bg-white/15 text-white font-medium border border-white/60 backdrop-blur-sm transition-all rounded" style="background-color: rgba(255,255,255,0.1);">
-                        Hodnocení (5,0 ⭐)
-                    </a>
-                </div>
-            </div>
         </div>
 
-        <!-- Spodní indikátor / scrollování dolů -->
-        <div class="relative z-10 pb-8 text-center">
-            <a href="#o-nas" class="text-white/70 hover:text-white inline-block animate-bounce transition-colors" aria-label="Přejít na obsah">
-                <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-            </a>
+        <!-- Mobilní rozbalovací menu -->
+        <div id="mobile-menu" class="mobile-menu">
+            <ul class="mobile-menu-links">
+                <li><a href="#o-nas" class="mobile-menu-link">01. O nás</a></li>
+                <li><a href="#sluzby" class="mobile-menu-link">02. Služby</a></li>
+                <li><a href="#reference" class="mobile-menu-link">03. Ukázky práce</a></li>
+                <li><a href="#cenik" class="mobile-menu-link">04. Ceník</a></li>
+                <li><a href="#kontakt" class="mobile-menu-link">05. Kontakt</a></li>
+            </ul>
+            <div style="margin-top: 1rem;">
+                <a href="tel:+420123456789" class="btn btn-primary" style="width: 100%;">
+                    Zavolat: +420 123 456 789
+                </a>
+            </div>
         </div>
     </header>
 
     <main>
-        <!-- O nás -->
-        <section id="o-nas" class="py-16 md:py-24 bg-white">
-            <div class="max-w-3xl mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 uppercase tracking-wide">O nás</h2>
-                <div class="w-16 h-1 bg-red-600 mx-auto mb-8"></div>
-                
-                <div class="space-y-4 text-lg md:text-xl leading-relaxed text-slate-700 font-normal">
-                    <p>
-                        Autoservis a pneuservis <strong>Racing Spirit</strong> sídlí ve Velvarech (Na Brčkově 133). Poskytujeme kompletní servisní, údržbové a mechanické opravy osobních i užitkových vozidel všech značek.
-                    </p>
-                    <p>
-                        Zajišťujeme pravidelný servis, výměny motorových olejů a filtrů, opravy brzdových systémů, podvozků, výměny rozvodů, servis převodovek, plnění a čištění klimatizace, autodiagnostiku i přípravu a vyřízení technické kontroly (STK).
-                    </p>
-                    <p>
-                        Zakládáme si na poctivém řemesle, individuálním přístupu, rychlém vyřízení a férovém jednání. Veškeré zakázky a termíny probíhají po předchozí domluvě.
-                    </p>
-                </div>
-            </div>
-        </section>
 
-        <!-- Služby -->
-        <section id="sluzby" class="py-12 md:py-16 bg-slate-50 border-y border-slate-200/80">
-            <div class="max-w-6xl mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 text-center uppercase tracking-wide">Naše služby</h2>
-                <div class="w-16 h-1 bg-red-600 mx-auto mb-10"></div>
-                
-                <div class="flex flex-col md:flex-row gap-12 lg:gap-16 items-start">
-                    <!-- Obrázek -->
-                    <div class="w-full md:w-1/2">
-                        <img src="foto-klimatizace-sluzby.jpg" alt="Racing Spirit" class="w-full h-auto border border-slate-200 object-cover rounded-lg shadow-sm">
-                    </div>
+        <!-- HERO SEKCE (50/50 ASYMETRICKÝ SPLIT, PŘÍSNÉ ZAROVNÁNÍ DOLEVA) -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-grid">
                     
-                    <!-- Texty a odrážky služeb -->
-                    <div class="w-full md:w-1/2 space-y-6 mt-4 md:mt-0">
+                    <!-- Levý textový sloupec -->
+                    <div class="hero-content">
+                        <span class="section-tag">Dílenská výroba &amp; řemeslné práce</span>
                         
-                        <!-- Blok Autoservis -->
-                        <div>
-                            <h3 class="text-xl md:text-2xl font-bold text-primary mb-3 uppercase tracking-wide flex items-center gap-3">
-                                <span class="w-2.5 h-2.5 bg-red-600 inline-block"></span>
-                                Autoservis
-                            </h3>
-                            <ul class="space-y-2 text-base md:text-lg text-slate-600 list-disc ml-6">
-                                <li>Pravidelné servisní prohlídky automobilů</li>
-                                <li>Výměna motorového oleje a všech filtrů (olejový, vzduchový, palivový, kabinový)</li>
-                                <li>Kompletní servis brzdových systémů a výměna brzdových kapalin</li>
-                                <li>Opravy podvozkových částí (čepy, ramena, silentbloky, tlumiče a pružiny)</li>
-                                <li>Mechanické opravy motorů, výměna rozvodových sad, spojek a převodovek</li>
-                            </ul>
-                        </div>
+                        <h1 class="hero-headline">
+                            Poctivé řemeslo a zakázková výroba.
+                        </h1>
                         
-                        <!-- Blok Pneuservis -->
-                        <div>
-                            <h3 class="text-xl md:text-2xl font-bold text-primary mb-3 uppercase tracking-wide flex items-center gap-3">
-                                <span class="w-2.5 h-2.5 bg-red-600 inline-block"></span>
-                                Pneuservis
-                            </h3>
-                            <ul class="space-y-2 text-base md:text-lg text-slate-600 list-disc ml-6">
-                                <li>Přezouvání osobních a dodávkových vozů</li>
-                                <li>Přesné vyvažování kol a disků</li>
-                                <li>Opravy defektů pneumatik a výměny ventilků</li>
-                                <li>Kontrola stavu opotřebení dezénu pneumatik</li>
-                            </ul>
+                        <p class="hero-lead">
+                            Precizní výroba dílců, odborné montáže a spolehlivý technický servis. Pracujeme s certifikovanými materiály a držíme předem dohodnuté termíny.
+                        </p>
+
+                        <div class="hero-meta-list">
+                            <div class="hero-meta-item">
+                                <strong>Lokalita:</strong> Region Velvary &amp; celá ČR
+                            </div>
+                            <div class="hero-meta-item">
+                                <strong>Záruka:</strong> 36 měsíců na provedenou práci
+                            </div>
+                            <div class="hero-meta-item">
+                                <strong>Termíny:</strong> Pevně stanovené ve smlouvě o dílo
+                            </div>
                         </div>
 
-                        <!-- Blok Plnění klimatizace -->
-                        <div>
-                            <h3 class="text-xl md:text-2xl font-bold text-primary mb-3 uppercase tracking-wide flex items-center gap-3">
-                                <span class="w-2.5 h-2.5 bg-red-600 inline-block"></span>
-                                Plnění klimatizace
-                            </h3>
-                            <ul class="space-y-2 text-base md:text-lg text-slate-600 list-disc ml-6">
-                                <li>Profesionální plnění autoklimatizací moderní servisní stanicí</li>
-                                <li>Vakuování systému, zkouška těsnosti a doplnění chladiva s olejem</li>
-                                <li>Dezinfekce klimatizace a vzduchových rozvodů interiéru</li>
-                                <li>Výměna kabinových a pylových filtrů</li>
-                            </ul>
+                        <div class="hero-actions">
+                            <a href="tel:+420123456789" class="btn btn-primary">
+                                Zavolat: +420 123 456 789
+                            </a>
+                            <a href="#kontakt" class="btn btn-secondary">
+                                Kde nás najdete &darr;
+                            </a>
                         </div>
-
-                        <!-- Blok Příprava na STK -->
-                        <div>
-                            <h3 class="text-xl md:text-2xl font-bold text-primary mb-3 uppercase tracking-wide flex items-center gap-3">
-                                <span class="w-2.5 h-2.5 bg-red-600 inline-block"></span>
-                                Příprava na STK
-                            </h3>
-                            <ul class="space-y-2 text-base md:text-lg text-slate-600 list-disc ml-6">
-                                <li>Komplexní kontrola technického stavu vozu před kontrolou</li>
-                                <li>Prověrka brzdové soustavy, vůlí podvozku, světel a emisních komponentů</li>
-                                <li>Odstranění zjištěných nedostatků před prohlídkou</li>
-                                <li>Kompletní zajištění a provedení STK a měření emisí</li>
-                            </ul>
-                        </div>
-
-                        <!-- Blok Kompletní diagnostika -->
-                        <div>
-                            <h3 class="text-xl md:text-2xl font-bold text-primary mb-3 uppercase tracking-wide flex items-center gap-3">
-                                <span class="w-2.5 h-2.5 bg-red-600 inline-block"></span>
-                                Kompletní diagnostika
-                            </h3>
-                            <ul class="space-y-2 text-base md:text-lg text-slate-600 list-disc ml-6">
-                                <li>Počítačová diagnostika elektronických systémů vozidla</li>
-                                <li>Čtení a výmaz chybových kódů z řídicích jednotek</li>
-                                <li>Sledování a vyhodnocování měřených hodnot v reálném čase</li>
-                                <li>Lokalizace skrytých elektrických i mechanických závad</li>
-                            </ul>
-                        </div>
-
-                        <!-- Blok Montáž autodoplňků -->
-                        <div>
-                            <h3 class="text-xl md:text-2xl font-bold text-primary mb-3 uppercase tracking-wide flex items-center gap-3">
-                                <span class="w-2.5 h-2.5 bg-red-600 inline-block"></span>
-                                Montáž autodoplňků
-                            </h3>
-                            <ul class="space-y-2 text-base md:text-lg text-slate-600 list-disc ml-6">
-                                <li>Montáž doplňkového vybavení a příslušenství</li>
-                                <li>Instalace osvětlení, senzorů a kamerových systémů</li>
-                                <li>Zapojení a montáž elektronických doplňků do interiéru i exteriéru</li>
-                            </ul>
-                        </div>
-
                     </div>
+
+                    <!-- Pravý obrazový blok s fotografií -->
+                    <div class="hero-visual">
+                        <div class="hero-img-wrapper">
+                            <img src="hlavni-fotka.jpg" alt="Provozovna a dílenské zázemí" class="hero-img">
+                            <div class="hero-img-caption">
+                                <span>PROVOZOVNA &amp; DÍLNA</span>
+                                <span>AKTIVNÍ PROVOZ</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Ukázky naší práce / Galerie -->
-        <section id="galerie" class="py-16 md:py-24 bg-white">
-            <div class="max-w-6xl mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 text-center uppercase tracking-wide">Ukázky naší práce</h2>
-                <div class="w-16 h-1 bg-red-600 mx-auto mb-12"></div>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- SEKCE 01: O NÁS (STRUČNÁ, VĚCNÁ, ČISTÁ) -->
+        <section id="o-nas" class="section-padding">
+            <div class="container">
+                <div class="split-about">
                     
-                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow border border-slate-200 cursor-pointer group" onclick="openLightbox('hlavni-fotka.jpg')">
-                        <img src="hlavni-fotka.jpg" alt="Racing Spirit" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div>
+                        <span class="section-tag">01 / O SPOLEČNOSTI</span>
+                        <h2 class="section-title">Náš přístup k řemeslu</h2>
                     </div>
 
-                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow border border-slate-200 cursor-pointer group" onclick="openLightbox('foto-klimatizace-sluzby.jpg')">
-                        <img src="foto-klimatizace-sluzby.jpg" alt="Racing Spirit" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
-                    </div>
+                    <div>
+                        <p class="about-lead-text">
+                            Zakládáme si na precizním dílenském zpracování, osobním přístupu a férovém jednání. Každé zakázce věnujeme maximální péči od zaměření po předání.
+                        </p>
 
-                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow border border-slate-200 cursor-pointer group" onclick="openLightbox('foto-rozvody.jpg')">
-                        <img src="foto-rozvody.jpg" alt="Racing Spirit" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
-                    </div>
+                        <div class="about-features-grid">
+                            
+                            <div class="about-feature">
+                                <span class="mono-num">[ 01 ]</span>
+                                <h3 class="feature-title">Kvalitní materiály</h3>
+                                <p class="feature-desc">
+                                    Využíváme atestované suroviny a díly od prověřených dodavatelů.
+                                </p>
+                            </div>
 
-                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow border border-slate-200 cursor-pointer group" onclick="openLightbox('foto-motor-prace.jpg')">
-                        <img src="foto-motor-prace.jpg" alt="Racing Spirit" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
-                    </div>
+                            <div class="about-feature">
+                                <span class="mono-num">[ 02 ]</span>
+                                <h3 class="feature-title">Přesné zaměření</h3>
+                                <p class="feature-desc">
+                                    Důkladná konzultace a měření na místě pro bezproblémovou montáž.
+                                </p>
+                            </div>
 
-                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow border border-slate-200 cursor-pointer group" onclick="openLightbox('foto-prevodovka.jpg')">
-                        <img src="foto-prevodovka.jpg" alt="Racing Spirit" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
-                    </div>
+                            <div class="about-feature">
+                                <span class="mono-num">[ 03 ]</span>
+                                <h3 class="feature-title">Pevný rozpočet</h3>
+                                <p class="feature-desc">
+                                    Dohodnutá cena platí. Žádné vícenáklady bez vašeho vědomí.
+                                </p>
+                            </div>
 
-                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow border border-slate-200 cursor-pointer group" onclick="openLightbox('foto-motor-montaz.jpg')">
-                        <img src="foto-motor-montaz.jpg" alt="Racing Spirit" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
                     </div>
 
                 </div>
             </div>
         </section>
 
-        <!-- Lightbox modal pro prohlížení fotografií -->
-        <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4 backdrop-blur-sm" onclick="closeLightbox(event)">
-            <button onclick="closeLightbox(event)" class="absolute top-6 right-6 text-white text-3xl font-bold p-2 hover:text-red-400 focus:outline-none" aria-label="Zavřít">&times;</button>
-            <div class="max-w-4xl max-h-[85vh] flex flex-col items-center">
-                <img id="lightbox-img" src="" alt="Racing Spirit" class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl">
-            </div>
-        </div>
+        <!-- SEKCE 02: SLUŽBY (PŘEHLEDNÝ A JEDNODUCHÝ BLOK) -->
+        <section id="sluzby" class="services-section section-padding">
+            <div class="container">
+                <span class="section-tag">02 / ČINNOSTI</span>
+                <h2 class="section-title">Nabízené služby</h2>
+                <p class="section-subtitle">
+                    Zajišťujeme ucelené řemeslné dodávky i jednotlivé dílenské a servisní práce.
+                </p>
 
-        <!-- Reference / Recenze z Google -->
-        <section id="reference" class="py-16 md:py-24 bg-slate-50 border-t border-slate-200/80">
-            <div class="max-w-6xl mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-2 text-center uppercase tracking-wide">Hodnocení zákazníků</h2>
-                <div class="flex items-center justify-center gap-2 mb-4 text-lg text-slate-700">
-                    <span class="font-bold text-xl">5,0 z 5</span>
-                    <div class="flex items-center text-amber-400">
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                    </div>
-                    <span>(na základě recenzí na Google)</span>
-                </div>
-                <div class="w-16 h-1 bg-red-600 mx-auto mb-10"></div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto">
+                <div class="services-grid">
                     
-                    <!-- Recenze 1: Artem Sarakuz -->
-                    <div class="bg-white border border-slate-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-                                <div>
-                                    <h3 class="text-lg font-bold text-slate-900">Artem Sarakuz</h3>
-                                    <span class="text-xs text-slate-500">3 recenze · před 3 měsíci</span>
-                                </div>
-                                <div class="flex items-center text-amber-400 gap-0.5">
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                </div>
-                            </div>
-                            <p class="text-slate-700 italic leading-relaxed">"Do tohoto autoservisu se budu vždy rád vracet. Skvělý přístup, ochotný a profesionální personál, který vše srozumitelně vysvětlí a nic zbytečně nenutí. Oprava byla provedena rychle, kvalitně a za rozumnou cenu. Oceňuji poctivé jednání, ..."</p>
-                        </div>
+                    <div class="service-box">
+                        <span class="mono-num">[ 01 ]</span>
+                        <h3 class="service-box-title">Zakázková dílenská výroba</h3>
+                        <p class="service-box-desc">
+                            Kusová i malosériová výroba konstrukcí, atypických dílů a sestav dle výkresové dokumentace nebo vzoru.
+                        </p>
                     </div>
 
-                    <!-- Recenze 2: Vojta -->
-                    <div class="bg-white border border-slate-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-                                <div>
-                                    <h3 class="text-lg font-bold text-slate-900">Vojta</h3>
-                                    <span class="text-xs text-slate-500">Místní průvodce · 82 recenzí · 30 fotek · před 7 měsíci</span>
-                                </div>
-                                <div class="flex items-center text-amber-400 gap-0.5">
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                </div>
-                            </div>
-                            <p class="text-slate-700 italic leading-relaxed">"Objednání na olej a filtry proběhlo okamžitě takže super. Cenově spokojenost. Jen lehce delší doba výměny ale to kvůli závozu filtru. Pánové sympaťáci a poradí 👍 ..."</p>
-                        </div>
+                    <div class="service-box">
+                        <span class="mono-num">[ 02 ]</span>
+                        <h3 class="service-box-title">Montážní &amp; instalační práce</h3>
+                        <p class="service-box-desc">
+                            Odborná instalace celků přímo na stavbě nebo v provozovně zákazníka s důrazem na přesnost a bezpečnost.
+                        </p>
                     </div>
 
-                    <!-- Recenze 3: Tereza Harazinová -->
-                    <div class="bg-white border border-slate-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-                                <div>
-                                    <h3 class="text-lg font-bold text-slate-900">Tereza Harazinová</h3>
-                                    <span class="text-xs text-slate-500">1 recenze · před 3 měsíci</span>
-                                </div>
-                                <div class="flex items-center text-amber-400 gap-0.5">
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                </div>
-                            </div>
-                            <p class="text-slate-700 italic leading-relaxed">"Po několika špatných zkušenostech jinde jsem konečně našla autoservis, kterému můžu věřit. Skvělá komunikace, ochota poradit a hlavně poctivý přístup. Auto bylo opravené rychle a bez zbytečných výdajů. Děkuji a určitě přijedu znovu."</p>
-                        </div>
+                    <div class="service-box">
+                        <span class="mono-num">[ 03 ]</span>
+                        <h3 class="service-box-title">Technický servis &amp; opravy</h3>
+                        <p class="service-box-desc">
+                            Pravidelná údržba zařízení, diagnostika závad, výměna opotřebovaných součástí a repase mechanických celků.
+                        </p>
                     </div>
 
-                    <!-- Recenze 4: Vlad Vartsaba -->
-                    <div class="bg-white border border-slate-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-                                <div>
-                                    <h3 class="text-lg font-bold text-slate-900">Vlad Vartsaba</h3>
-                                    <span class="text-xs text-slate-500">3 recenze · před 3 měsíci</span>
-                                </div>
-                                <div class="flex items-center text-amber-400 gap-0.5">
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                </div>
-                            </div>
-                            <p class="text-slate-700 italic leading-relaxed">"Za mě naprostá spokojenost. Kluci vědí, co dělají, nic zbytečně nevymýšlí a řeknou vše narovinu. Auto opravené rychle a za férovou cenu. Takový servis se dnes hledá těžko. Doporučuju."</p>
-                        </div>
+                    <div class="service-box">
+                        <span class="mono-num">[ 04 ]</span>
+                        <h3 class="service-box-title">Povrchové úpravy &amp; renovace</h3>
+                        <p class="service-box-desc">
+                            Mechanické očištění, pískování, ochranné nátěry a antikorozní úprava pro zajištění dlouhé životnosti.
+                        </p>
                     </div>
 
-                    <!-- Recenze 5: pihatka1 -->
-                    <div class="bg-white border border-slate-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-                                <div>
-                                    <h3 class="text-lg font-bold text-slate-900">pihatka1</h3>
-                                    <span class="text-xs text-slate-500">Místní průvodce · 15 recenzí · 9 fotek · před 3 měsíci</span>
-                                </div>
-                                <div class="flex items-center text-amber-400 gap-0.5">
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                </div>
-                            </div>
-                            <p class="text-slate-700 italic leading-relaxed">"Musím se podělit o zkušenost s tímto servisem Naprostá spokojenost už od chvíle co jsem přijela do tohoto servisu .Pan mě uvítal s úsměvem ,po vysvětlení co mám za problém hned mi vysvětlit co vše je potřeba udělat .Hned druhý den mi zavolal a řekl že by nebylo od věci ještě vyměnit nějaké součástky (k ničemu mě nenutil jen doporučil )A po vyzvednutí auta jsem byla moc mile překvapená .Jen více takových lidi co pracují v autoservisu .Tito pánové se snaží opravit a NE jen dělat výměnu kus za kus .Ještě jednou děkuji a budu jen doporučovat"</p>
-                        </div>
-                    </div>
-
-                    <!-- Recenze 6: Denisa Tesařová -->
-                    <div class="bg-white border border-slate-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-                                <div>
-                                    <h3 class="text-lg font-bold text-slate-900">Denisa Tesařová</h3>
-                                    <span class="text-xs text-slate-500">1 recenze · před 3 měsíci</span>
-                                </div>
-                                <div class="flex items-center text-amber-400 gap-0.5">
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                </div>
-                            </div>
-                            <p class="text-slate-700 italic leading-relaxed">"S tímto servisem jsem velmi spokojená. Je znát ochota a zkušenost personálu. Vše dokáží srozumitelně vysvětlit.😁 ..."</p>
-                        </div>
-                    </div>
-
-                </div>
-                
-                <div class="mt-12 text-center">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Racing+Spirit+Velvary" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 bg-gray-800 hover:bg-gray-900 text-white font-medium rounded shadow-sm hover:shadow-md transition-all">
-                        Zobrazit profil a recenze na Googlu
-                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Ceník -->
-        <section id="cenik" class="py-16 md:py-24 bg-white border-t border-slate-200">
-            <div class="max-w-3xl mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 uppercase tracking-wide">Ceník</h2>
-                <div class="w-16 h-1 bg-red-600 mx-auto mb-8"></div>
-                
-                <div class="mt-8">
-                    <p class="text-xl md:text-2xl text-slate-800 font-semibold leading-relaxed mb-4">
-                        Ceny služeb jsou dle domluvy.
-                    </p>
+        <!-- SEKCE 03: UKÁZKY PRÁCE & REFERENCE (GALERIE A OVĚŘENÉ ZKUŠENOSTI) -->
+        <section id="reference" class="gallery-section section-padding">
+            <div class="container">
+                <span class="section-tag">03 / REALIZACE</span>
+                <h2 class="section-title">Ukázky práce &amp; reference</h2>
+                <p class="section-subtitle">
+                    Výběr z dokončených zakázek z naší dílny. Kliknutím na fotografii zobrazíte detail.
+                </p>
 
-                    <div class="mt-10">
-                        <a href="#kontakt" class="inline-block px-8 py-3 bg-primary hover:bg-gray-800 text-white font-medium shadow-sm hover:shadow-md transition-all rounded">
-                            Kontaktovat pro domluvu
-                        </a>
+                <!-- Mřížka fotografií -->
+                <div class="gallery-grid">
+                    
+                    <div class="gallery-card">
+                        <div class="gallery-img-wrap">
+                            <img src="foto-klimatizace-sluzby.jpg" alt="Zakázkové opracování dílců" class="gallery-card-img" loading="lazy">
+                        </div>
+                        <div class="gallery-card-info">
+                            <h3 class="gallery-card-title">Opracování dílců</h3>
+                            <div class="gallery-card-sub">Dílenská výroba</div>
+                        </div>
                     </div>
+
+                    <div class="gallery-card">
+                        <div class="gallery-img-wrap">
+                            <img src="foto-rozvody.jpg" alt="Instalace mechanických sestav" class="gallery-card-img" loading="lazy">
+                        </div>
+                        <div class="gallery-card-info">
+                            <h3 class="gallery-card-title">Montáž sestav</h3>
+                            <div class="gallery-card-sub">Instalace na místě</div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <div class="gallery-img-wrap">
+                            <img src="foto-motor-prace.jpg" alt="Konstrukční spoje" class="gallery-card-img" loading="lazy">
+                        </div>
+                        <div class="gallery-card-info">
+                            <h3 class="gallery-card-title">Přesné spoje</h3>
+                            <div class="gallery-card-sub">Detailní práce</div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <div class="gallery-img-wrap">
+                            <img src="foto-prevodovka.jpg" alt="Generální oprava mechanismu" class="gallery-card-img" loading="lazy">
+                        </div>
+                        <div class="gallery-card-info">
+                            <h3 class="gallery-card-title">Oprava mechanismu</h3>
+                            <div class="gallery-card-sub">Servis a renovace</div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <div class="gallery-img-wrap">
+                            <img src="foto-motor-montaz.jpg" alt="Kompletace zařízení" class="gallery-card-img" loading="lazy">
+                        </div>
+                        <div class="gallery-card-info">
+                            <h3 class="gallery-card-title">Kompletace celku</h3>
+                            <div class="gallery-card-sub">Finální montáž</div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <div class="gallery-img-wrap">
+                            <img src="hlavni-fotka.jpg" alt="Zázemí dílny" class="gallery-card-img" loading="lazy">
+                        </div>
+                        <div class="gallery-card-info">
+                            <h3 class="gallery-card-title">Pracovní zázemí</h3>
+                            <div class="gallery-card-sub">Provozovna dílny</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Recenze zákazníků -->
+                <div class="testimonials-row">
+                    <span class="section-tag">HODNOCENÍ KLIENTŮ</span>
+                    <h3 style="font-size: 1.5rem; font-weight: 800; text-transform: uppercase;">Zkušenosti zákazníků</h3>
+
+                    <div class="testimonials-grid">
+                        
+                        <div class="testimonial-item">
+                            <p class="testimonial-text">
+                                „Poctivý přístup, rychlá domluva a dodržení dohodnutého rozpočtu. Práce byla provedena kvalitně a bez zbytečných průtahů.“
+                            </p>
+                            <div class="testimonial-author">
+                                Artem Sarakuz
+                                <span>Zakázkový servis · Dlouhodobá spolupráce</span>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item">
+                            <p class="testimonial-text">
+                                „Kluci vědí, co dělají, nic nevymýšlí a řeknou vše narovinu. Profesionální dílna, na kterou se dá vždy spolehnout.“
+                            </p>
+                            <div class="testimonial-author">
+                                Vlad Vartsaba
+                                <span>Mechanická údržba a montáž</span>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item">
+                            <p class="testimonial-text">
+                                „Maximální spokojenost. Vše mi srozumitelně vysvětlili, doporučili vhodné řešení a práce proběhla na jedničku.“
+                            </p>
+                            <div class="testimonial-author">
+                                Denisa Tesařová
+                                <span>Pravidelný servis a údržba</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEKCE 04: CENÍK (PŘEHLEDNÁ ČISTÁ TABULKA BEZ PŘEKLIKÁVACÍCH TLAČÍTEK) -->
+        <section id="cenik" class="pricing-section section-padding">
+            <div class="container">
+                <span class="section-tag">04 / SAZBY</span>
+                <h2 class="section-title">Orientační ceník prací</h2>
+                <p class="section-subtitle">
+                    Základní přehled sazeb. Konečná cena je vždy stanovena na základě konkrétního rozsahu zakázky.
+                </p>
+
+                <!-- Jednoduchá čistá tabulka připravená pro dynamická data -->
+                <div class="pricing-table-wrap">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>Položka / Typ práce</th>
+                                <th style="width: 140px;">Měrná jednotka</th>
+                                <th style="width: 160px; text-align: right;">Cena bez DPH</th>
+                                <th style="width: 160px; text-align: right;">Cena s DPH</th>
+                            </tr>
+                        </thead>
+                        <tbody id="price-table-body">
+                            <tr>
+                                <td class="col-bold">Dílenská hodina — strojní opracování a řezání</td>
+                                <td class="col-unit">hod</td>
+                                <td class="col-price">750 Kč</td>
+                                <td class="col-price">908 Kč</td>
+                            </tr>
+                            <tr>
+                                <td class="col-bold">Svářečské a zámečnické práce</td>
+                                <td class="col-unit">hod</td>
+                                <td class="col-price">850 Kč</td>
+                                <td class="col-price">1 029 Kč</td>
+                            </tr>
+                            <tr>
+                                <td class="col-bold">Montážní práce na místě realizace</td>
+                                <td class="col-unit">hod / pracovník</td>
+                                <td class="col-price">600 Kč</td>
+                                <td class="col-price">726 Kč</td>
+                            </tr>
+                            <tr>
+                                <td class="col-bold">Technická diagnostika a servisní prohlídka</td>
+                                <td class="col-unit">úkon</td>
+                                <td class="col-price">500 Kč</td>
+                                <td class="col-price">605 Kč</td>
+                            </tr>
+                            <tr>
+                                <td class="col-bold">Periodická údržba a seřízení zařízení</td>
+                                <td class="col-unit">hod</td>
+                                <td class="col-price">650 Kč</td>
+                                <td class="col-price">787 Kč</td>
+                            </tr>
+                            <tr>
+                                <td class="col-bold">Doprava montážního vozu na místo</td>
+                                <td class="col-unit">km</td>
+                                <td class="col-price">18 Kč</td>
+                                <td class="col-price">22 Kč</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pricing-footnote">
+                    * Uvedené ceny jsou orientační. Přesný položkový rozpočet vypracujeme po osobní konzultaci a zaměření.
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEKCE 05: KONTAKT (PŘÍMÉ ÚDAJE & MAPA, BEZ FORMULÁŘE) -->
+        <section id="kontakt" class="contact-section section-padding">
+            <div class="container">
+                <span class="section-tag" style="color: #ff7d57;">05 / SPOJENÍ</span>
+                <h2 class="section-title">Kontaktní údaje &amp; Adresa dílny</h2>
+                <p class="section-subtitle">
+                    V případě zájmu o zakázku nebo konzultaci nás kontaktujte telefonicky, e-mailem nebo navštivte naši dílnu.
+                </p>
+
+                <div class="contact-grid">
+                    
+                    <!-- Přímé kontaktní informace -->
+                    <div class="contact-details-box">
+                        
+                        <div class="contact-fact-group">
+                            <div class="contact-fact-label">TELEFONNÍ SPOJENÍ</div>
+                            <div class="contact-fact-value">
+                                <a href="tel:+420123456789">+420 123 456 789</a>
+                            </div>
+                            <div class="contact-fact-sub">Dostupnost pro příjem zakázek: Po–Pá 07:00 – 16:30</div>
+                        </div>
+
+                        <div class="contact-fact-group">
+                            <div class="contact-fact-label">E-MAILOVÝ KONTAKT</div>
+                            <div class="contact-fact-value">
+                                <a href="mailto:info@remeslna-dilna.cz">info@remeslna-dilna.cz</a>
+                            </div>
+                            <div class="contact-fact-sub">Odpovídáme obvykle do 24 hodin</div>
+                        </div>
+
+                        <div class="contact-fact-group">
+                            <div class="contact-fact-label">ADRESA PROVOZOVNY</div>
+                            <div class="contact-fact-value">
+                                Na Brčkově 133, 273 24 Velvary
+                            </div>
+                            <div class="contact-fact-sub">Vjezd do areálu dílny přímo z hlavní komunikace</div>
+                        </div>
+
+                        <div class="contact-fact-group">
+                            <div class="contact-fact-label">FAKTURAČNÍ ÚDAJE</div>
+                            <div class="contact-fact-sub">
+                                Řemeslná Dílna &amp; Výroba s.r.o.<br>
+                                IČO: 07234333 | DIČ: CZ07234333<br>
+                                Datová schránka: ufrbdxf
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Vnořená mapa provozovny -->
+                    <div>
+                        <div class="map-wrapper">
+                            <iframe 
+                                class="map-frame"
+                                title="Mapa provozovny"
+                                src="https://maps.google.com/maps?q=Velvary%20Na%20Brckove%20133&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- Kontakt -->
-    <footer id="kontakt" class="bg-primary text-white py-16">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center uppercase tracking-wide">Kontakt</h2>
-            <div class="w-16 h-1 bg-red-600 mx-auto mb-14"></div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-gray-300">
-                
-                <!-- Adresa -->
-                <div class="flex items-start gap-4">
-                    <div class="bg-white/10 p-3 flex-shrink-0 rounded-md">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-white text-lg mb-2 tracking-wide uppercase">Adresa</h3>
-                        <p class="leading-relaxed">
-                            <strong>Racing Spirit s.r.o.</strong><br>
-                            Na Brčkově 133<br>
-                            273 24 Velvary
-                        </p>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Racing+Spirit+Velvary" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-sm text-red-400 hover:text-red-300 hover:underline">
-                            Navigovat &rarr;
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Kontakt -->
-                <div class="flex items-start gap-4">
-                    <div class="bg-white/10 p-3 flex-shrink-0 rounded-md">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-white text-lg mb-2 tracking-wide uppercase">Telefon &amp; E-mail</h3>
-                        <ul class="space-y-2">
-                            <li>
-                                <a href="tel:+420725588112" class="text-lg font-bold text-white hover:text-red-400 transition-colors">
-                                    +420 725 588 112
-                                </a>
-                            </li>
-                            <li>
-                                <a href="mailto:Racingspirit@email.cz" class="text-sm text-gray-300 hover:text-red-400 transition-colors">
-                                    Racingspirit@email.cz
-                                </a>
-                            </li>
-                            <li class="pt-2 text-xs text-gray-400">
-                                <div>IČO: 07234333</div>
-                                <div>Datová schránka: ufrbdxf</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Otevírací doba -->
-                <div class="flex items-start gap-4">
-                    <div class="bg-white/10 p-3 flex-shrink-0 rounded-md">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-white text-lg mb-2 tracking-wide uppercase">Otevírací doba</h3>
-                        <ul class="space-y-1 text-sm leading-relaxed">
-                            <li class="flex justify-between gap-3"><span class="text-gray-400">Pondělí:</span> <span class="font-medium text-white">9:00 – 17:00</span></li>
-                            <li class="flex justify-between gap-3"><span class="text-gray-400">Úterý:</span> <span class="font-medium text-white">9:00 – 17:00</span></li>
-                            <li class="flex justify-between gap-3"><span class="text-gray-400">Středa:</span> <span class="font-medium text-white">9:00 – 17:00</span></li>
-                            <li class="flex justify-between gap-3"><span class="text-gray-400">Čtvrtek:</span> <span class="font-medium text-white">9:00 – 17:00</span></li>
-                            <li class="flex justify-between gap-3"><span class="text-gray-400">Pátek:</span> <span class="font-medium text-white">9:00 – 17:00</span></li>
-                            <li class="flex justify-between gap-3"><span class="text-gray-400">Sobota:</span> <span class="text-red-400 font-medium">Zavřeno</span></li>
-                            <li class="flex justify-between gap-3"><span class="text-gray-400">Neděle:</span> <span class="text-red-400 font-medium">Zavřeno</span></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Sociální sítě -->
-                <div class="flex items-start gap-4">
-                    <div class="bg-white/10 p-3 flex-shrink-0 rounded-md">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-white text-lg mb-2 tracking-wide uppercase">Sledujte nás</h3>
-                        <ul class="space-y-3 text-sm">
-                            <li>
-                                <a href="https://www.facebook.com/racingspiritvelvary" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                                    <svg class="w-5 h-5 fill-current text-blue-500" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                                    <span>Facebook</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/racingspirit_velvary/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                                    <svg class="w-5 h-5 fill-current text-pink-500" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                                    <span>Instagram</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
+    <!-- FOOTER (JEDNODUCHÝ, ČISTÝ) -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                &copy; 2026 Řemeslná Dílna &amp; Výroba. Všechna práva vyhrazena.
             </div>
-            
-            <!-- Mapa -->
-            <div class="w-full h-80 md:h-96 mt-14 rounded-lg overflow-hidden border border-gray-700 shadow-md">
-                <iframe 
-                    title="Mapa - Racing Spirit Velvary"
-                    src="https://maps.google.com/maps?q=Racing%20Spirit%20Velvary&t=&z=16&ie=UTF8&iwloc=&output=embed" 
-                    width="100%" 
-                    height="100%" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
-            </div>
-            
-            <div class="mt-14 pt-8 border-t border-gray-800 text-center text-sm text-gray-400">
-                <p>&copy; 2026 Racing Spirit s.r.o. Všechna práva vyhrazena.</p>
+
+            <div>
+                <span id="scroll-top-btn" class="scroll-top">
+                    [ Zpět nahoru &uarr; ]
+                </span>
             </div>
         </div>
     </footer>
 
-    <!-- Skripty -->
-    <script>
-        // Mobilní menu
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+    <!-- LIGHTBOX PRO FOTOGRAFIE -->
+    <div id="image-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-box">
+            <div class="modal-header">
+                <span id="modal-title">Ukázka práce</span>
+                <button id="modal-close" class="modal-close-btn" type="button" aria-label="Zavřít">[ ZAVŘÍT &times; ]</button>
+            </div>
+            <div class="modal-body">
+                <img id="modal-img" src="" alt="Detail" class="modal-img">
+            </div>
+        </div>
+    </div>
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Lightbox pro galerii
-        function openLightbox(src) {
-            const lightbox = document.getElementById('lightbox');
-            const img = document.getElementById('lightbox-img');
-            img.src = src;
-            lightbox.classList.remove('hidden');
-            lightbox.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox(e) {
-            if (e.target.id === 'lightbox' || e.target.tagName === 'BUTTON' || e.key === 'Escape') {
-                const lightbox = document.getElementById('lightbox');
-                lightbox.classList.add('hidden');
-                lightbox.classList.remove('flex');
-                document.body.style.overflow = '';
-            }
-        }
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeLightbox(e);
-            }
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
