@@ -3,67 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play wash cars | Profesionální ruční mytí a čištění aut Knovíz</title>
-    <meta name="description" content="Play wash cars v Knovízi u Slaného. Profesionální ruční mytí aut, renovace laků, mokré tepování interiérů, aplikace vosků a odstranění zvířecích chlupů. Objednejte se na +420 603 389 689.">
-    <meta name="keywords" content="ruční mytí aut Knovíz, čištění interiéru auta, tepování sedaček Slaný, renovace laků, detailing Knovíz, Play wash cars">
-    
-    <!-- Open Graph / Meta -->
-    <meta property="og:title" content="Play wash cars | Profesionální ruční mytí aut Knovíz">
-    <meta property="og:description" content="Šetrné ruční mytí vozidel, renovace starých laků, hloubkové tepování a prémiové voskování v Knovízi u Slaného.">
-    <meta property="og:image" content="hero-carwash.jpg">
-    <meta property="og:type" content="website">
-
-    <!-- Tailwind CSS -->
+    <title>Play wash cars | Ruční mytí aut Knovíz</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         html { scroll-behavior: smooth !important; }
         body { font-family: 'Inter', sans-serif; }
-        .font-heading { font-family: 'Montserrat', sans-serif; }
     </style>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#0284c7',       /* Sky blue / Brilliant wash gloss */
-                        primaryDark: '#0369a1',   /* Deep oceanic cyan */
-                        primaryLight: '#38bdf8',  /* Electric cyan */
-                        accent: '#06b6d4',        /* Bright aqua */
-                        darkCard: '#1e293b'
+                        primary: '#2563eb',
+                        primaryDark: '#1d4ed8'
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="antialiased bg-white text-slate-800 selection:bg-primary selection:text-white">
+<body class="antialiased bg-white text-slate-800">
 
-    <!-- Horní navigace přes úvodní obrázek/video -->
+    <!-- Horní navigace přes úvodní obrázek -->
     <header class="relative min-h-screen flex flex-col justify-between isolate overflow-hidden">
         <!-- Pozadí fotka -->
-        <img src="hero-carwash.jpg" alt="Play wash cars - Profesionální ruční mytí a detailing Knovíz" class="absolute inset-0 w-full h-full object-cover -z-20 scale-105 transition-transform duration-1000 ease-out" loading="eager" decoding="sync">
-        <!-- Tmavý gradientní překryv pro maximální čitelnost a prémiovou atmosféru -->
-        <div class="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/85 -z-10"></div>
+        <img src="main.PNG" alt="Play wash cars" class="absolute inset-0 w-full h-full object-cover -z-20" loading="eager" decoding="sync">
+        <!-- Tmavý překryv pro čitelnost textu -->
+        <div class="absolute inset-0 bg-black/50 -z-10"></div>
 
-        <!-- Plovoucí navigační lišta, zcela průhledná s backdrop efektem při scrollovaní -->
-        <nav id="navbar" class="relative z-50 w-full bg-transparent transition-all duration-300">
+        <!-- Plovoucí navigační lišta -->
+        <nav class="relative z-50 w-full bg-transparent">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-20">
                     
-                    <!-- Logo / Název firmy -->
-                    <a href="#" class="flex items-center gap-3 text-2xl md:text-3xl font-heading font-extrabold text-white tracking-wider hover:text-primaryLight transition-colors group">
-                        <span class="p-2 bg-primary/20 backdrop-blur-md rounded-lg border border-primary/40 text-primaryLight group-hover:scale-105 transition-transform">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" class="hidden"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
-                        </span>
-                        <span class="tracking-tight">PLAY <span class="text-primaryLight font-light">WASH CARS</span></span>
+                    <!-- Název firmy bez ikonky -->
+                    <a href="#" class="text-2xl md:text-3xl font-bold text-white tracking-wider hover:text-gray-300 transition-colors">
+                        Play wash cars
                     </a>
 
                     <!-- Tlačítko mobilního menu -->
-                    <button id="mobile-menu-btn" type="button" class="lg:hidden text-white hover:text-primaryLight focus:outline-none p-2 rounded-lg bg-white/10 backdrop-blur-md border border-white/10" aria-label="Menu">
+                    <button id="mobile-menu-btn" type="button" class="lg:hidden text-white hover:text-gray-300 focus:outline-none p-2" aria-label="Menu">
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -71,78 +51,58 @@
                     
                     <!-- Navigační odkazy pro desktop -->
                     <ul class="hidden lg:flex items-center space-x-8 text-sm md:text-base font-medium text-white/95">
-                        <li><a href="#o-nas" class="hover:text-primaryLight transition-colors">O nás</a></li>
-                        <li><a href="#sluzby" class="hover:text-primaryLight transition-colors">Služby</a></li>
-                        <li><a href="#galerie" class="hover:text-primaryLight transition-colors">Fotogalerie</a></li>
-                        <li><a href="#reference" class="hover:text-primaryLight transition-colors">Reference</a></li>
-                        <li><a href="#cenik" class="hover:text-primaryLight transition-colors">Ceník</a></li>
-                        <li><a href="#kontakt" class="hover:text-primaryLight transition-colors">Kontakt</a></li>
-                        <li>
-                            <a href="tel:+420603389689" class="px-5 py-2.5 bg-primary hover:bg-primaryDark text-white font-semibold rounded-md shadow-lg shadow-primary/30 transition-all flex items-center gap-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                                +420 603 389 689
-                            </a>
-                        </li>
+                        <li><a href="#o-nas" class="hover:text-primary transition-colors">O nás</a></li>
+                        <li><a href="#sluzby" class="hover:text-primary transition-colors">Služby</a></li>
+                        <li><a href="#galerie" class="hover:text-primary transition-colors">Fotogalerie</a></li>
+                        <li><a href="#reference" class="hover:text-primary transition-colors">Reference</a></li>
+                        <li><a href="#cenik" class="hover:text-primary transition-colors">Ceník</a></li>
+                        <li><a href="#kontakt" class="hover:text-primary transition-colors">Kontakt</a></li>
                     </ul>
                 </div>
 
                 <!-- Mobilní rozbalovací menu -->
-                <div id="mobile-menu" class="hidden lg:hidden pb-6 pt-4 bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-2xl px-5 mt-2 shadow-2xl transition-all">
+                <div id="mobile-menu" class="hidden lg:hidden pb-6 pt-4 bg-black/80 backdrop-blur-md rounded-b-xl px-4 absolute left-0 w-full">
                     <ul class="flex flex-col space-y-4 text-base font-medium text-white">
-                        <li><a href="#o-nas" class="mobile-nav-link block hover:text-primaryLight py-1 border-b border-white/10">O nás</a></li>
-                        <li><a href="#sluzby" class="mobile-nav-link block hover:text-primaryLight py-1 border-b border-white/10">Služby</a></li>
-                        <li><a href="#galerie" class="mobile-nav-link block hover:text-primaryLight py-1 border-b border-white/10">Fotogalerie</a></li>
-                        <li><a href="#reference" class="mobile-nav-link block hover:text-primaryLight py-1 border-b border-white/10">Reference</a></li>
-                        <li><a href="#cenik" class="mobile-nav-link block hover:text-primaryLight py-1 border-b border-white/10">Ceník</a></li>
-                        <li><a href="#kontakt" class="mobile-nav-link block hover:text-primaryLight py-1 border-b border-white/10">Kontakt</a></li>
-                        <li class="pt-2">
-                            <a href="tel:+420603389689" class="w-full text-center px-4 py-3 bg-primary hover:bg-primaryDark text-white font-semibold rounded-lg shadow-md block">
-                                Zavolat: +420 603 389 689
-                            </a>
-                        </li>
+                        <li><a href="#o-nas" class="mobile-nav-link block hover:text-primary">O nás</a></li>
+                        <li><a href="#sluzby" class="mobile-nav-link block hover:text-primary">Služby</a></li>
+                        <li><a href="#galerie" class="mobile-nav-link block hover:text-primary">Fotogalerie</a></li>
+                        <li><a href="#reference" class="mobile-nav-link block hover:text-primary">Reference</a></li>
+                        <li><a href="#cenik" class="mobile-nav-link block hover:text-primary">Ceník</a></li>
+                        <li><a href="#kontakt" class="mobile-nav-link block hover:text-primary">Kontakt</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
         <!-- Hlavní středový obsah Hero sekce -->
-        <div class="relative z-10 flex-grow flex items-center justify-center text-center px-4 py-16">
+        <div class="relative z-10 flex-grow flex items-center justify-center text-center px-4 py-16 h-[calc(100vh-80px)]">
             <div class="max-w-4xl mx-auto">
-                <!-- Status tag -->
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-sm font-medium mb-6">
-                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                    Knovíz u Slaného &bull; Ruční mytí & Detailing aut
-                </div>
-
-                <h1 class="text-white drop-shadow-xl font-heading font-extrabold tracking-tight">
-                    <span class="block text-5xl sm:text-6xl md:text-8xl uppercase mb-2">Play wash cars</span>
-                    <span class="block text-lg sm:text-xl md:text-2xl font-light tracking-widest text-primaryLight uppercase">Knovíz 28 | +420 603 389 689</span>
+                <h1 class="text-white drop-shadow-lg">
+                    <span class="block text-5xl sm:text-6xl md:text-8xl font-bold mb-4">Play wash cars</span>
+                    <span class="block text-lg sm:text-xl md:text-2xl font-light tracking-widest text-white/90">Knovíz 28 | +420 603 389 689</span>
                 </h1>
-                
-                <p class="mt-6 text-lg md:text-xl text-slate-200 drop-shadow-md font-light max-w-2xl mx-auto leading-relaxed">
-                    Dopřejte svému vozu špičkovou péči bez kompromisů. Šetrné ruční mytí, renovace a leštění laků, hloubkové mokré tepování a prémiová autokosmetika.
+                <p class="mt-6 text-lg md:text-xl text-white/90 drop-shadow-md font-light max-w-2xl mx-auto">
+                    Ruční mytí aut, čištění a tepování interiérů, renovace laků a používání vosků.
                 </p>
                 
                 <!-- Linka pod nadpisem -->
-                <div class="w-24 h-1.5 bg-primary mx-auto my-8 rounded-full shadow-lg shadow-primary/50"></div>
+                <div class="w-24 h-1 bg-primary mx-auto my-8"></div>
                 
                 <!-- Tlačítka pro kontakt -->
                 <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href="tel:+420603389689" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-primary hover:bg-primaryDark text-white font-semibold transition-all rounded-md shadow-xl shadow-primary/30 hover:scale-[1.02] active:scale-95">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                        Rezervovat termín
+                    <a href="tel:+420603389689" class="w-full sm:w-auto inline-block px-8 py-3 bg-primary hover:bg-primaryDark text-white font-medium transition-all rounded-sm shadow-lg">
+                        Objednat se (+420 603 389 689)
                     </a>
-                    <a href="#sluzby" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-medium border border-white/40 backdrop-blur-md transition-all rounded-md hover:scale-[1.02] active:scale-95">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        Prohlédnout služby
+                    <a href="#sluzby" class="w-full sm:w-auto inline-block px-8 py-3 bg-white/10 hover:bg-white/20 text-white font-medium border border-white/50 backdrop-blur-sm transition-all rounded-sm">
+                        Přehled služeb
                     </a>
                 </div>
             </div>
         </div>
 
-        <!-- Spodní indikátor / prázdný prostor -->
-        <div class="relative z-10 pb-8 text-center">
-            <a href="#o-nas" class="text-white/70 hover:text-white inline-block animate-bounce transition-colors p-2" aria-label="Přejít na obsah">
+        <!-- Spodní indikátor -->
+        <div class="absolute bottom-8 left-0 right-0 z-10 pb-8 text-center">
+            <a href="#o-nas" class="text-white/70 hover:text-white inline-block animate-bounce transition-colors" aria-label="Přejít na obsah">
                 <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                 </svg>
@@ -152,153 +112,61 @@
 
     <main>
         <!-- O nás -->
-        <section id="o-nas" class="py-20 md:py-28 bg-white">
-            <div class="max-w-5xl mx-auto px-6 text-center">
-                <span class="text-primary font-bold tracking-widest uppercase text-sm">O naší dílně</span>
-                <h2 class="text-3xl md:text-5xl font-heading font-extrabold text-slate-900 mt-2 mb-4 tracking-tight">O nás</h2>
-                <div class="w-20 h-1 bg-primary mx-auto mb-10 rounded-full"></div>
+        <section id="o-nas" class="py-16 md:py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-wide">O nás</h2>
+                <div class="w-16 h-1 bg-primary mx-auto mb-8"></div>
                 
-                <div class="space-y-6 text-lg md:text-xl leading-relaxed text-slate-600 font-light max-w-3xl mx-auto">
+                <div class="space-y-6 text-lg md:text-xl leading-relaxed text-slate-600 font-light">
                     <p>
-                        V <strong class="text-slate-900 font-semibold">Play wash cars</strong> se s maximální precizností věnujeme profesionálnímu ručnímu mytí, renovaci laků a hloubkovému čištění interiérů všech typů vozidel. 
+                        V Play wash cars se zabýváme ručním mytím a čištěním vozidel v Knovízi. Provádíme šetrné mytí vozů, používání vosků dle výběru, renovaci starých laků, mokré tepování sedaček a koberců i čištění stropu vozidla.
                     </p>
                     <p>
-                        Věříme, že čisté a ošetřené auto není jen otázkou estetiky, ale také ochrany jeho hodnoty a komfortu při každé jízdě. Ke každému automobilu přistupujeme individuálně – používáme výhradně osvědčenou a šetrnou autokosmetiku, moderní strojní vybavení a ověřené detailingové postupy.
+                        Vše probíhá na počkání nebo dle telefonické domluvy.
                     </p>
-                </div>
-
-                <!-- 4 klíčové pilíře kvality -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 text-left">
-                    <div class="p-6 bg-slate-50 border border-slate-100 rounded-xl hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        </div>
-                        <h3 class="font-heading font-bold text-slate-900 text-lg mb-2">100% ruční šetrnost</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Žádné mycí kartáče, které škrábou lak. Pouze dvouvědrová metoda a jemná mikrovlákna.</p>
-                    </div>
-
-                    <div class="p-6 bg-slate-50 border border-slate-100 rounded-xl hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-                        </div>
-                        <h3 class="font-heading font-bold text-slate-900 text-lg mb-2">Prémiové vosky</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Široký výběr ochranných vosků – od základních až po špičkové tvrdé a hybridní pečetě.</p>
-                    </div>
-
-                    <div class="p-6 bg-slate-50 border border-slate-100 rounded-xl hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                        </div>
-                        <h3 class="font-heading font-bold text-slate-900 text-lg mb-2">Hloubkové tepování</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Mokrá extrakce vytáhne i zažranou špínu, skvrny od kávy i zápach ze sedaček a koberců.</p>
-                    </div>
-
-                    <div class="p-6 bg-slate-50 border border-slate-100 rounded-xl hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        </div>
-                        <h3 class="font-heading font-bold text-slate-900 text-lg mb-2">Flexibilní termíny</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Pracujeme v Knovízi u Slaného. Možnost umytí na počkání nebo dle domluvy.</p>
-                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Služby -->
-        <section id="sluzby" class="py-20 md:py-28 bg-slate-50 border-y border-slate-200/80">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-primary font-bold tracking-widest uppercase text-sm">Kompletní péče o vozy</span>
-                    <h2 class="text-3xl md:text-5xl font-heading font-extrabold text-slate-900 mt-2 mb-4 tracking-tight">Naše služby</h2>
-                    <div class="w-20 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
-                    <p class="text-slate-600 text-lg">Od expresního šetrného mytí karoserie po kompletní hloubkovou renovaci interiéru i laku.</p>
-                </div>
+        <section id="sluzby" class="py-16 md:py-24 bg-slate-50 border-y border-slate-200/80">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center tracking-wide">Naše služby</h2>
+                <div class="w-16 h-1 bg-primary mx-auto mb-12"></div>
                 
-                <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-                    <!-- Obrázek u služeb -->
-                    <div class="w-full lg:w-1/2">
-                        <div class="relative group">
-                            <div class="absolute -inset-2 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-25 group-hover:opacity-40 transition duration-500"></div>
-                            <img src="service-interior.jpg" alt="Detailing a hloubkové čištění interiérů aut Play wash cars" class="relative w-full h-[540px] object-cover rounded-xl shadow-2xl">
-                            <div class="absolute bottom-6 left-6 right-6 bg-slate-900/90 backdrop-blur-md p-5 rounded-xl border border-white/10 text-white">
-                                <p class="text-sm font-semibold text-primaryLight uppercase tracking-wider">Garance kvality</p>
-                                <p class="text-sm text-slate-300 mt-1">Používáme certifikované pH neutrální chemie, které nepoškozují materiály v interiéru ani ochranné vrstvy na laku.</p>
-                            </div>
-                        </div>
+                <div class="flex flex-col md:flex-row gap-12 lg:gap-16 items-center">
+                    <!-- Reálná fotka z mytí -->
+                    <div class="w-full md:w-1/2">
+                        <img src="Capture.PNG" alt="Play wash cars mytí vozu" class="w-full h-[500px] object-cover rounded-sm shadow-lg">
                     </div>
                     
-                    <!-- Texty a odrážky služeb (Všechny služby ze screenshotů) -->
-                    <div class="w-full lg:w-1/2 space-y-8">
+                    <!-- Texty a odrážky služeb -->
+                    <div class="w-full md:w-1/2 space-y-10 mt-4 md:mt-0">
                         
-                        <!-- 1. Vosky & Mytí -->
-                        <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:border-primary/40 transition-colors">
-                            <h3 class="text-xl font-heading font-bold text-slate-900 mb-3 tracking-wide flex items-center gap-3">
-                                <span class="w-3 h-3 bg-primary rounded-full inline-block shadow shadow-primary/50"></span>
-                                Používání vosků dle výběru & Umytí do sucha
+                        <!-- Blok Mytí a lak -->
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3 tracking-wide flex items-center gap-3">
+                                <span class="w-2.5 h-2.5 bg-primary rounded-full inline-block"></span>
+                                Mytí vozu a péče o lak
                             </h3>
-                            <ul class="space-y-2 text-slate-600 text-base ml-6">
-                                <li class="flex items-start gap-2">
-                                    <span class="text-primary font-bold">&check;</span>
-                                    <span><strong>Umytí vozu do sucha na počkání se základním voskem:</strong> šetrné mytí aktivní pěnou, sušení a základní ochrana.</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-primary font-bold">&check;</span>
-                                    <span><strong>Aplikace vosků dle výběru:</strong> syntetické polymerní vosky, prémiové přírodní karnauby i keramické sealanty.</span>
-                                </li>
+                            <ul class="space-y-2 text-base md:text-lg text-slate-600 ml-6">
+                                <li>• Umytí vozu do sucha na počkání se základním voskem</li>
+                                <li>• Používání vosků dle výběru</li>
+                                <li>• Renovace starých laků</li>
                             </ul>
                         </div>
                         
-                        <!-- 2. Renovace starých laků -->
-                        <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:border-primary/40 transition-colors">
-                            <h3 class="text-xl font-heading font-bold text-slate-900 mb-3 tracking-wide flex items-center gap-3">
-                                <span class="w-3 h-3 bg-primary rounded-full inline-block shadow shadow-primary/50"></span>
-                                Renovace starých laků
+                        <!-- Blok Interiér -->
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3 tracking-wide flex items-center gap-3">
+                                <span class="w-2.5 h-2.5 bg-primary rounded-full inline-block"></span>
+                                Čištění interiéru a tepování
                             </h3>
-                            <ul class="space-y-2 text-slate-600 text-base ml-6">
-                                <li class="flex items-start gap-2">
-                                    <span class="text-primary font-bold">&check;</span>
-                                    <span>Strojní vícekrokové leštění laku a odstranění mikroškrábanců, oxidace a hologramů z myček.</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-primary font-bold">&check;</span>
-                                    <span>Znovuzrození hlubokého zrcadlového lesku a sytosti původní barvy karoserie.</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- 3. Tepování a interiér -->
-                        <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:border-primary/40 transition-colors">
-                            <h3 class="text-xl font-heading font-bold text-slate-900 mb-3 tracking-wide flex items-center gap-3">
-                                <span class="w-3 h-3 bg-primary rounded-full inline-block shadow shadow-primary/50"></span>
-                                Tepování mokrou formou & Koberce a sedačky
-                            </h3>
-                            <ul class="space-y-2 text-slate-600 text-base ml-6">
-                                <li class="flex items-start gap-2">
-                                    <span class="text-primary font-bold">&check;</span>
-                                    <span><strong>Tepování mokrou formou:</strong> profesionální extrakční praní sedaček, podlahy a kufru do hloubky vláken.</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-primary font-bold">&check;</span>
-                                    <span><strong>Tepování koberců a sedaček:</strong> odstranění skvrn, mastnoty, zažraného prachu a oživení tkaniny.</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- 4. Speciální čištění (stropnice + zvířecí mazlíčci) -->
-                        <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:border-primary/40 transition-colors">
-                            <h3 class="text-xl font-heading font-bold text-slate-900 mb-3 tracking-wide flex items-center gap-3">
-                                <span class="w-3 h-3 bg-primary rounded-full inline-block shadow shadow-primary/50"></span>
-                                Čištění stropu & Vyčištění od domácích mazlíčků
-                            </h3>
-                            <ul class="space-y-2 text-slate-600 text-base ml-6">
-                                <li class="flex items-start gap-2">
-                                    <span class="text-primary font-bold">&check;</span>
-                                    <span><strong>Čištění stropu vozidla:</strong> bezpečná a citlivá metoda suchou mikropěnou bez prověšení látky stropnice.</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-primary font-bold">&check;</span>
-                                    <span><strong>Vyčištění vozů od vašeho domácího mazlíčka:</strong> důkladné mechanické odstranění zvířecích chlupů ze všech záhybů + neutralizace zápachů.</span>
-                                </li>
+                            <ul class="space-y-2 text-base md:text-lg text-slate-600 ml-6">
+                                <li>• Tepovaní mokrou formou</li>
+                                <li>• Tepování koberců a sedaček</li>
+                                <li>• Čistění stropu vozidla</li>
+                                <li>• Vyčištění vozů od vašeho domácího mazlíčka</li>
                             </ul>
                         </div>
 
@@ -308,201 +176,85 @@
         </section>
 
         <!-- Fotogalerie -->
-        <section id="galerie" class="py-20 md:py-28 bg-white">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-primary font-bold tracking-widest uppercase text-sm">Ukázky naší práce</span>
-                    <h2 class="text-3xl md:text-5xl font-heading font-extrabold text-slate-900 mt-2 mb-4 tracking-tight">Fotogalerie realizací</h2>
-                    <div class="w-20 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
-                    <p class="text-slate-600 text-lg">Prohlédněte si výsledky naší práce. Každý detail má pro nás zásadní význam.</p>
-                </div>
+        <section id="galerie" class="py-16 md:py-24 bg-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center tracking-wide">Fotogalerie</h2>
+                <div class="w-16 h-1 bg-primary mx-auto mb-10"></div>
                 
-                <!-- Galerie Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    
-                    <!-- Položka 1: Renovace laku -->
-                    <div class="group relative overflow-hidden rounded-xl shadow-md cursor-pointer bg-slate-900" onclick="openLightbox('gallery-1.jpg', 'Strojní leštění a renovace laku', 'Vícekroková korekce laku s odstraněním škrábanců pro zrcadlový finiš.')">
-                        <img src="gallery-1.jpg" alt="Strojní leštění a renovace laku - Play wash cars" class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110 opacity-95 group-hover:opacity-100">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
-                            <span class="text-xs font-semibold text-primaryLight uppercase tracking-wider">Renovace laku</span>
-                            <h4 class="text-white font-heading font-bold text-lg">Strojní leštění & korekce</h4>
-                            <p class="text-xs text-slate-300 mt-1">Zvětšit fotografii &rarr;</p>
-                        </div>
-                    </div>
-
-                    <!-- Položka 2: Ruční mytí pěnou -->
-                    <div class="group relative overflow-hidden rounded-xl shadow-md cursor-pointer bg-slate-900" onclick="openLightbox('gallery-2.jpg', 'Šetrné ruční mytí aktivní pěnou', 'Hustá sněhová pěna uvolňuje nečistoty bez poškrábání laku.')">
-                        <img src="gallery-2.jpg" alt="Aktivní pěna a ruční mytí - Play wash cars" class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110 opacity-95 group-hover:opacity-100">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
-                            <span class="text-xs font-semibold text-primaryLight uppercase tracking-wider">Ruční mytí</span>
-                            <h4 class="text-white font-heading font-bold text-lg">Aktivní pěna & předmytí</h4>
-                            <p class="text-xs text-slate-300 mt-1">Zvětšit fotografii &rarr;</p>
-                        </div>
-                    </div>
-
-                    <!-- Položka 3: Voskování & Beading -->
-                    <div class="group relative overflow-hidden rounded-xl shadow-md cursor-pointer bg-slate-900" onclick="openLightbox('gallery-3.jpg', 'Hydrofobní ochrana a aplikace vosku', 'Perfektní kapičkování vody (beading) a dlouhotrvající ochrana laku.')">
-                        <img src="gallery-3.jpg" alt="Hydrofobní voskování a ochrana laku - Play wash cars" class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110 opacity-95 group-hover:opacity-100">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
-                            <span class="text-xs font-semibold text-primaryLight uppercase tracking-wider">Ochrana laku</span>
-                            <h4 class="text-white font-heading font-bold text-lg">Prémiové voskování</h4>
-                            <p class="text-xs text-slate-300 mt-1">Zvětšit fotografii &rarr;</p>
-                        </div>
-                    </div>
-
-                    <!-- Položka 4: Tepování interiéru -->
-                    <div class="group relative overflow-hidden rounded-xl shadow-md cursor-pointer bg-slate-900" onclick="openLightbox('gallery-4.jpg', 'Mokré tepování koberců a sedaček', 'Dokonale čisté koberečky a pedály po hloubkovém mokrém vyčištění.')">
-                        <img src="gallery-4.jpg" alt="Tepování koberců a sedaček - Play wash cars" class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110 opacity-95 group-hover:opacity-100">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
-                            <span class="text-xs font-semibold text-primaryLight uppercase tracking-wider">Interiér</span>
-                            <h4 class="text-white font-heading font-bold text-lg">Hloubkové tepování</h4>
-                            <p class="text-xs text-slate-300 mt-1">Zvětšit fotografii &rarr;</p>
-                        </div>
-                    </div>
-
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                    <img src="Capture.PNG" alt="Play wash cars foto 1" class="w-full h-64 object-cover rounded-sm shadow hover:opacity-90 transition-opacity cursor-pointer">
+                    <img src="Capture1.PNG" alt="Play wash cars foto 2" class="w-full h-64 object-cover rounded-sm shadow hover:opacity-90 transition-opacity cursor-pointer">
+                    <img src="Capture2.PNG" alt="Play wash cars foto 3" class="w-full h-64 object-cover rounded-sm shadow hover:opacity-90 transition-opacity cursor-pointer">
+                    <img src="Capture4.PNG" alt="Play wash cars foto 4" class="w-full h-64 object-cover rounded-sm shadow hover:opacity-90 transition-opacity cursor-pointer">
                 </div>
-
                 <div class="mt-12 text-center">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Play%20wash%20cars&query_place_id=ChIJ-YLBBBfJC0cRHuANaX24xeU" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-md shadow-md hover:shadow-xl transition-all hover:scale-[1.02]">
-                        <svg class="w-5 h-5 text-primaryLight" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                        </svg>
-                        Zobrazit profil Play wash cars na Google Mapách
+                    <a href="https://www.google.com/maps/search/?api=1&query=Play%20wash%20cars&query_place_id=ChIJ-YLBBBfJC0cRHuANaX24xeU" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded-sm shadow-sm hover:shadow-md transition-all">
+                        Zobrazit profil na Google Mapách
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- Reference -->
-        <section id="reference" class="py-20 md:py-28 bg-slate-50 border-t border-slate-200/80">
+        <section id="reference" class="py-16 md:py-24 bg-slate-50">
             <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-primary font-bold tracking-widest uppercase text-sm">Spokojení řidiči</span>
-                    <h2 class="text-3xl md:text-5xl font-heading font-extrabold text-slate-900 mt-2 mb-3 tracking-tight">Hodnocení zákazníků</h2>
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-900 font-semibold text-sm mb-4">
-                        <span class="text-amber-500">⭐⭐⭐⭐⭐</span> 5,0 z 5 hvězdiček na Google Mapách
-                    </div>
-                    <div class="w-20 h-1 bg-primary mx-auto mb-4 rounded-full"></div>
-                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2 text-center tracking-wide">Hodnocení zákazníků</h2>
+                <p class="text-center text-lg text-slate-600 mb-4">5,0 z 5 ⭐ (na základě recenzí na Google)</p>
+                <div class="w-16 h-1 bg-primary mx-auto mb-12"></div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto">
-                    <!-- Recenze 1: Pinon (ze screenshotu) -->
-                    <div class="bg-white border border-slate-200/80 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center gap-1 text-amber-400 text-base">⭐⭐⭐⭐⭐</div>
-                                <span class="text-xs text-slate-400">Před rokem</span>
-                            </div>
-                            <p class="text-slate-700 italic text-base md:text-lg leading-relaxed mb-6">
-                                "Služby této firmy naprosto předčily má očekávání. Interiér vozu byl vyčištěný opravdu do detailu, nezůstalo ani smítko. Auto po čištění nádherně vonělo a vypadalo doslova jako nové ze showroomu. Skvělá a pečlivá práce!"
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
-                            <div class="w-10 h-10 rounded-full bg-slate-200 text-slate-700 font-bold flex items-center justify-center font-heading">P</div>
-                            <div>
-                                <h3 class="font-bold text-slate-900 text-base">Pinon</h3>
-                                <p class="text-xs text-slate-500">Local Guide &bull; 404 recenzí na Google</p>
-                            </div>
-                        </div>
+                    <!-- Recenze 1: Pinon -->
+                    <div class="bg-white border border-slate-100 p-8 rounded-sm shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-1 text-yellow-400 mb-4 text-sm">⭐⭐⭐⭐⭐</div>
+                        <p class="text-slate-600 italic mb-6">"Služby této firmy naprosto předčily má očekávání. Interiér vozu byl vyčištěný opravdu do detailu, nezůstalo ani smítko. Auto po čištění nádherně..."</p>
+                        <h3 class="font-bold text-gray-900">— Pinon <span class="font-normal text-slate-500 text-sm">(Místní průvodce &bull; 404 recenzí)</span></h3>
                     </div>
 
-                    <!-- Recenze 2: Pavel Modr (ze screenshotu) -->
-                    <div class="bg-white border border-slate-200/80 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center gap-1 text-amber-400 text-base">⭐⭐⭐⭐⭐</div>
-                                <span class="text-xs text-slate-400">Před 3 lety</span>
-                            </div>
-                            <p class="text-slate-700 italic text-base md:text-lg leading-relaxed mb-6">
-                                "Skvělý přístup, výborně odvedená práce na 120%, komunikace a ochota na jedničku s hvězdičkou, cena super, auto jako nové. Mohu jen vřele doporučit."
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
-                            <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-800 font-bold flex items-center justify-center font-heading">p</div>
-                            <div>
-                                <h3 class="font-bold text-slate-900 text-base">pavel modr</h3>
-                                <p class="text-xs text-slate-500">Ověřený zákazník Google</p>
-                            </div>
-                        </div>
+                    <!-- Recenze 2: pavel modr -->
+                    <div class="bg-white border border-slate-100 p-8 rounded-sm shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-1 text-yellow-400 mb-4 text-sm">⭐⭐⭐⭐⭐</div>
+                        <p class="text-slate-600 italic mb-6">"Skvělý přístup, výborně odvedená práce na 120%, komunikace a ochota na jedničku s hvězdičkou, cena super, auto jako nové. Mohu jen vřele doporučit."</p>
+                        <h3 class="font-bold text-gray-900">— pavel modr <span class="font-normal text-slate-500 text-sm">(2 recenze)</span></h3>
                     </div>
 
-                    <!-- Recenze 3: David K. -->
-                    <div class="bg-white border border-slate-200/80 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center gap-1 text-amber-400 text-base">⭐⭐⭐⭐⭐</div>
-                                <span class="text-xs text-slate-400">Před 6 měsíci</span>
-                            </div>
-                            <p class="text-slate-700 italic text-base md:text-lg leading-relaxed mb-6">
-                                "Perfektní ruční mytí a nanesení vosku. Lak auta má neskutečný lesk a voda po něm doslova klouže. Rychlá domluva po telefonu a velmi férové jednání. Knovíz je kousek od Slaného, určitě budu jezdit pravidelně."
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
-                            <div class="w-10 h-10 rounded-full bg-blue-100 text-primaryDark font-bold flex items-center justify-center font-heading">D</div>
-                            <div>
-                                <h3 class="font-bold text-slate-900 text-base">David K.</h3>
-                                <p class="text-xs text-slate-500">Ověřený zákazník Google</p>
-                            </div>
-                        </div>
+                    <!-- Recenze 3: Patrik Singer -->
+                    <div class="bg-white border border-slate-100 p-8 rounded-sm shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-1 text-yellow-400 mb-4 text-sm">⭐⭐⭐⭐⭐</div>
+                        <p class="text-slate-600 italic mb-6">"Naprostá spokojenost. Skvělý přístup, pečlivost, cena. A práce odvedená na 120%. Mohu jen doporučit."</p>
+                        <h3 class="font-bold text-gray-900">— Patrik Singer <span class="font-normal text-slate-500 text-sm">(2 recenze)</span></h3>
                     </div>
 
-                    <!-- Recenze 4: Tomáš R. -->
-                    <div class="bg-white border border-slate-200/80 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center gap-1 text-amber-400 text-base">⭐⭐⭐⭐⭐</div>
-                                <span class="text-xs text-slate-400">Před rokem</span>
-                            </div>
-                            <p class="text-slate-700 italic text-base md:text-lg leading-relaxed mb-6">
-                                "Vozidlo po psovi vypadalo beznadějně – všude chlupy a fleky na zadních sedačkách. Pán v Play wash cars udělal zázrak. Auto je čisté, voňavé a bez jediného chloupku. Klobouk dolů za trpělivost a výsledek!"
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
-                            <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-800 font-bold flex items-center justify-center font-heading">T</div>
-                            <div>
-                                <h3 class="font-bold text-slate-900 text-base">Tomáš R.</h3>
-                                <p class="text-xs text-slate-500">Ověřený zákazník Google</p>
-                            </div>
-                        </div>
+                    <!-- Recenze 4: Olina Šplíchalová -->
+                    <div class="bg-white border border-slate-100 p-8 rounded-sm shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-1 text-yellow-400 mb-4 text-sm">⭐⭐⭐⭐⭐</div>
+                        <p class="text-slate-600 italic mb-6">"Nechala jsem si vyčistit + vytepovat auto a jsem velmi spokojená. Bezkonkurenčně rychlá a vstřícná domluva, kvalitně odvedená práce. Na doporučení jsem si nechala auto i navoskovat a super. Nečistoty na laku nedrží a auto se stále leskne. Určitě se brzy vrátím."</p>
+                        <h3 class="font-bold text-gray-900">— Olina Šplíchalová <span class="font-normal text-slate-500 text-sm">(1 recenze &bull; 1 fotka)</span></h3>
                     </div>
-                </div>
 
-                <div class="mt-12 text-center">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Play%20wash%20cars&query_place_id=ChIJ-YLBBBfJC0cRHuANaX24xeU" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary font-semibold hover:text-primaryDark transition-colors">
-                        <span>Přečíst všechny recenze na Google Mapách</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </a>
+                    <!-- Recenze 5: Blanka Ševčíková (přes 2 sloupce na větších displejích) -->
+                    <div class="bg-white border border-slate-100 p-8 rounded-sm shadow-sm hover:shadow-md transition-shadow md:col-span-2">
+                        <div class="flex items-center gap-1 text-yellow-400 mb-4 text-sm">⭐⭐⭐⭐⭐</div>
+                        <p class="text-slate-600 italic mb-6">"Velice doporučuji službu Play Wash Cars Knovíz! Interiér mého vozu dokonale vyčistili mokrou cestou a auto bylo krásně provoněné. Oceňuji nejen jejich pečlivost a ochotu, ale také použití kvalitní autokosmetiky, díky které je výsledek opravdu perfektní. Pokud hledáte spolehlivou firmu na čištění auta, určitě neváhejte a svěřte svůj vůz právě jim. Pět hvězdiček!"</p>
+                        <h3 class="font-bold text-gray-900">— Blanka Ševčíková <span class="font-normal text-slate-500 text-sm">(Místní průvodce &bull; 10 recenzí &bull; 1 fotka)</span></h3>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Ceník -->
-        <section id="cenik" class="py-20 md:py-28 bg-white border-t border-slate-100">
-            <div class="max-w-4xl mx-auto px-6 text-center">
-                <span class="text-primary font-bold tracking-widest uppercase text-sm">Férové ceny</span>
-                <h2 class="text-3xl md:text-5xl font-heading font-extrabold text-slate-900 mt-2 mb-4 tracking-tight">Ceník služeb</h2>
-                <div class="w-20 h-1 bg-primary mx-auto mb-8 rounded-full"></div>
+        <section id="cenik" class="py-16 md:py-24 bg-white border-t border-slate-100">
+            <div class="max-w-3xl mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-wide">Ceník</h2>
+                <div class="w-16 h-1 bg-primary mx-auto mb-8"></div>
                 
-                <div class="bg-slate-50 border border-slate-200/80 p-8 sm:p-12 rounded-2xl max-w-2xl mx-auto shadow-sm">
-                    <div class="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-
-                    <h3 class="text-2xl sm:text-3xl font-heading font-bold text-slate-900 mb-4">
-                        Ceny služeb jsou dle individuální domluvy
-                    </h3>
-                    
-                    <p class="text-lg text-slate-600 leading-relaxed font-light mb-8">
-                        Každé vozidlo je v jiném stavu a vyžaduje specifickou péči. Cenu stanovujeme vždy předem a transparentně podle velikosti vozu, míry znečištění a vámi vybraného balíčku služeb.
+                <div class="mt-8">
+                    <p class="text-xl md:text-2xl text-gray-900 font-light leading-relaxed mb-4">
+                        Ceny služeb jsou po domluvě.
                     </p>
 
-                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                        <a href="tel:+420603389689" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-primary hover:bg-primaryDark text-white font-semibold shadow-lg shadow-primary/30 transition-all rounded-md hover:scale-[1.02]">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                            Zavolat pro cenovou nabídku
-                        </a>
-                        <a href="#kontakt" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 font-medium transition-all rounded-md">
-                            Zobrazit kontakt & otevírací dobu
+                    <div class="mt-10">
+                        <a href="#kontakt" class="inline-block px-8 py-3 bg-primary hover:bg-primaryDark text-white font-medium shadow-sm hover:shadow-md transition-all rounded-sm">
+                            Kontaktovat pro domluvu termínu
                         </a>
                     </div>
                 </div>
@@ -512,139 +264,68 @@
     </main>
 
     <!-- Kontakt -->
-    <footer id="kontakt" class="bg-slate-950 text-white pt-20 pb-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-primaryLight font-bold tracking-widest uppercase text-sm">Kde nás najdete</span>
-                <h2 class="text-3xl md:text-5xl font-heading font-extrabold text-white mt-2 mb-4 tracking-tight">Kontakt & Kde nás najdete</h2>
-                <div class="w-20 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
-                <p class="text-slate-400 text-lg">Těšíme se na vaši návštěvu. Pro zajištění termínu prosíme volejte předem.</p>
-            </div>
+    <footer id="kontakt" class="bg-[#2a2626] text-white py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center tracking-wide">Kontakt</h2>
+            <div class="w-16 h-1 bg-primary mx-auto mb-14"></div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-slate-300">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-gray-300">
                 
-                <!-- Adresa & Fakturační údaje -->
-                <div class="flex items-start gap-4 bg-slate-900/60 p-6 rounded-2xl border border-slate-800/80">
-                    <div class="bg-primary/20 p-3.5 flex-shrink-0 rounded-xl text-primaryLight border border-primary/30">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-white text-lg mb-2 tracking-wide font-heading">Adresa provozovny</h4>
-                        <p class="leading-relaxed text-slate-300 font-light mb-4">
-                            <strong>Play wash cars</strong><br>
-                            Knovíz 28<br>
-                            274 01 Knovíz (u Slaného)
-                        </p>
-                        <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-1 text-slate-400">Fakturační údaje</h4>
-                        <p class="text-sm text-slate-400 font-light">IČO: 63961989</p>
-                        
-                        <div class="mt-4">
-                            <a href="https://www.google.com/maps/search/?api=1&query=Play%20wash%20cars&query_place_id=ChIJ-YLBBBfJC0cRHuANaX24xeU" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-primaryLight hover:underline font-semibold">
-                                Navigovat do Play wash cars &rarr;
-                            </a>
-                        </div>
-                    </div>
+                <!-- Adresa & Firma -->
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-2 tracking-wide">Adresa</h4>
+                    <p class="leading-relaxed font-light mb-4">Knovíz 28<br>274 01 Knovíz</p>
+                    <h4 class="font-bold text-white text-sm mb-1 tracking-wide opacity-80">Fakturační údaje</h4>
+                    <p class="text-sm opacity-70 font-light">IČO: 63961989</p>
                 </div>
 
-                <!-- Kontakt & Spojení -->
-                <div class="flex items-start gap-4 bg-slate-900/60 p-6 rounded-2xl border border-slate-800/80">
-                    <div class="bg-primary/20 p-3.5 flex-shrink-0 rounded-xl text-primaryLight border border-primary/30">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-white text-lg mb-2 tracking-wide font-heading">Přímé spojení</h4>
-                        <ul class="space-y-3 font-light">
-                            <li>
-                                <span class="text-xs uppercase text-slate-400 block">Telefon pro objednávky</span>
-                                <a href="tel:+420603389689" class="text-white hover:text-primaryLight text-lg font-semibold transition-all">
-                                    +420 603 389 689
-                                </a>
-                            </li>
-                            <li>
-                                <span class="text-xs uppercase text-slate-400 block">E-mail</span>
-                                <a href="mailto:kohoutdavid5@gmail.com" class="hover:text-primaryLight text-slate-300 transition-all">
-                                    kohoutdavid5@gmail.com
-                                </a>
-                            </li>
-                            <li class="pt-1">
-                                <span class="text-xs uppercase text-slate-400 block mb-1">Domluva termínu</span>
-                                <span class="text-sm text-slate-300">Dle telefonické domluvy</span>
-                            </li>
-                        </ul>
-                    </div>
+                <!-- Kontakt -->
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-2 tracking-wide">Spojení</h4>
+                    <ul class="space-y-3 font-light">
+                        <li><a href="tel:+420603389689" class="hover:text-primary transition-all">+420 603 389 689</a></li>
+                        <li><a href="mailto:kohoutdavid5@gmail.com" class="hover:text-primary transition-all">kohoutdavid5@gmail.com</a></li>
+                        <li class="text-gray-400">Dle telefonické domluvy</li>
+                    </ul>
                 </div>
 
                 <!-- Otevírací doba -->
-                <div class="flex items-start gap-4 bg-slate-900/60 p-6 rounded-2xl border border-slate-800/80">
-                    <div class="bg-primary/20 p-3.5 flex-shrink-0 rounded-xl text-primaryLight border border-primary/30">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <div class="w-full">
-                        <h4 class="font-bold text-white text-lg mb-2 tracking-wide font-heading">Otevírací doba</h4>
-                        <ul class="leading-relaxed font-light space-y-1 text-sm text-slate-300">
-                            <li class="flex justify-between border-b border-slate-800 pb-1"><span>Pondělí</span><span class="font-medium text-white">9:00 – 17:00</span></li>
-                            <li class="flex justify-between border-b border-slate-800 pb-1"><span>Úterý</span><span class="font-medium text-white">9:00 – 17:00</span></li>
-                            <li class="flex justify-between border-b border-slate-800 pb-1"><span>Středa</span><span class="font-medium text-white">9:00 – 17:00</span></li>
-                            <li class="flex justify-between border-b border-slate-800 pb-1"><span>Čtvrtek</span><span class="font-medium text-white">9:00 – 17:00</span></li>
-                            <li class="flex justify-between border-b border-slate-800 pb-1"><span>Pátek</span><span class="font-medium text-white">9:00 – 17:00</span></li>
-                            <li class="flex justify-between border-b border-slate-800 pb-1 text-slate-400"><span>Sobota</span><span class="text-primaryLight">Dle tel. domluvy</span></li>
-                            <li class="flex justify-between text-slate-400"><span>Neděle</span><span class="text-primaryLight">Dle tel. domluvy</span></li>
-                        </ul>
-                    </div>
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-2 tracking-wide">Otevírací doba</h4>
+                    <ul class="leading-relaxed font-light space-y-1">
+                        <li class="flex justify-between w-44"><span>Pondělí</span><span>9:00 – 17:00</span></li>
+                        <li class="flex justify-between w-44"><span>Úterý</span><span>9:00 – 17:00</span></li>
+                        <li class="flex justify-between w-44"><span>Středa</span><span>9:00 – 17:00</span></li>
+                        <li class="flex justify-between w-44"><span>Čtvrtek</span><span>9:00 – 17:00</span></li>
+                        <li class="flex justify-between w-44"><span>Pátek</span><span>9:00 – 17:00</span></li>
+                        <li class="flex justify-between w-44 text-gray-400"><span>Sobota</span><span>Zavřeno</span></li>
+                        <li class="flex justify-between w-44 text-gray-400"><span>Neděle</span><span>Zavřeno</span></li>
+                    </ul>
                 </div>
 
             </div>
             
-            <!-- Google Mapa -->
-            <div class="w-full h-80 md:h-[420px] mt-16 rounded-2xl overflow-hidden border border-slate-800 relative shadow-2xl">
+            <!-- Mapa -->
+            <div class="w-full h-80 md:h-96 mt-16 rounded-sm overflow-hidden">
                 <iframe 
-                    src="https://maps.google.com/maps?q=Play%20wash%20cars,%20Knov%C3%ADz%2028,%20274%2001&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                    src="https://maps.google.com/maps?q=Play%20wash%20cars,%20Knov%C3%ADz%2028&t=&z=16&ie=UTF8&iwloc=&output=embed" 
                     width="100%" 
                     height="100%" 
                     style="border:0;" 
                     allowfullscreen="" 
                     loading="lazy"
-                    title="Play wash cars Knovíz Google Mapa"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
-                <!-- Tlačítko navigace přímo v mapě -->
-                <div class="absolute bottom-4 right-4 z-10">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Play%20wash%20cars&query_place_id=ChIJ-YLBBBfJC0cRHuANaX24xeU" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900/90 hover:bg-slate-900 text-white text-sm font-semibold rounded-lg shadow-xl backdrop-blur-md border border-white/20 transition-all">
-                        <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                        Otevřít v aplikaci Google Mapy
-                    </a>
-                </div>
             </div>
             
-            <div class="mt-16 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-sm text-slate-400 font-light gap-4">
-                <p>&copy; 2026 Play wash cars &bull; Ruční mytí aut Knovíz 28. Všechna práva vyhrazena.</p>
-                <div class="flex items-center gap-6">
-                    <a href="#o-nas" class="hover:text-white transition-colors">O nás</a>
-                    <a href="#sluzby" class="hover:text-white transition-colors">Služby</a>
-                    <a href="#cenik" class="hover:text-white transition-colors">Ceník</a>
-                    <a href="#kontakt" class="hover:text-white transition-colors">Kontakt</a>
-                </div>
+            <div class="mt-16 pt-8 border-t border-white/10 text-center text-sm text-gray-500 font-light">
+                <p>&copy; 2026 Play wash cars. Všechna práva vyhrazena.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Lightbox Modal pro fotogalerii -->
-    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4" onclick="closeLightbox()">
-        <div class="relative max-w-4xl w-full bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl" onclick="event.stopPropagation()">
-            <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 p-2 text-slate-300 hover:text-white bg-black/50 hover:bg-black/80 rounded-full transition-colors" aria-label="Zavřít">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-            <img id="lightbox-img" src="" alt="Detail realizace" class="w-full max-h-[75vh] object-contain bg-black/40">
-            <div class="p-6 bg-slate-900">
-                <h3 id="lightbox-title" class="text-xl font-heading font-bold text-white mb-1"></h3>
-                <p id="lightbox-desc" class="text-slate-400 text-sm"></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Skripty -->
+    <!-- Skript pro mobilní menu -->
     <script>
-        // Mobilní menu
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-nav-link');
@@ -657,43 +338,6 @@
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
-        });
-
-        // Efekt ztmavení navigační lišty při scrollovaní
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-slate-950/90', 'backdrop-blur-md', 'shadow-lg');
-                navbar.classList.remove('bg-transparent');
-            } else {
-                navbar.classList.remove('bg-slate-950/90', 'backdrop-blur-md', 'shadow-lg');
-                navbar.classList.add('bg-transparent');
-            }
-        });
-
-        // Lightbox funkce pro galerii
-        function openLightbox(src, title, desc) {
-            const lightbox = document.getElementById('lightbox');
-            document.getElementById('lightbox-img').src = src;
-            document.getElementById('lightbox-title').innerText = title;
-            document.getElementById('lightbox-desc').innerText = desc;
-            lightbox.classList.remove('hidden');
-            lightbox.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.classList.add('hidden');
-            lightbox.classList.remove('flex');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Klávesa Esc pro zavření lightboxu
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeLightbox();
-            }
         });
     </script>
 </body>
