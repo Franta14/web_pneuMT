@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ŘEMESLNÁ DÍLNA & VÝROBA — UNIVERZÁLNÍ ŠABLONA PRO ŘEMESLA
+   MARI&TALI TATTOO-PIERCING (MARIE A NATÁLIA NÉMETHY, KOLÍN)
    Styl: Utilitární, čistý, minimalistický, bez AI klišé, striktně ostré hrany.
    Technologie: Čisté Vanilla CSS bez frameworků a externích knihoven.
    ========================================================================== */
@@ -21,14 +21,14 @@
     --c-border: #dcded8;
     --c-border-strong: #131416;
 
-    /* Tmavé sekce (technický kontrast pro kontakt) */
+    /* Tmavé sekce (kontrast pro kontakt) */
     --c-dark-bg: #121316;
     --c-dark-surface: #1a1b20;
     --c-dark-border: #2c2e35;
     --c-dark-text: #f4f5f7;
     --c-dark-muted: #8e929d;
 
-    /* Akcentní barva (pálená cihla / technická signalizační) */
+    /* Akcentní barva */
     --c-accent: #c8441b;
     --c-accent-hover: #a83410;
 
@@ -134,7 +134,7 @@ a {
 }
 
 /* --------------------------------------------------------------------------
-   4. HLAVNÍ NAVIGACE (ČISTÁ, JEDNODUCHÁ, BEZ HORNÍ ČERNÉ LIŠTY)
+   4. HLAVNÍ NAVIGACE
    -------------------------------------------------------------------------- */
 .site-header {
     position: sticky;
@@ -215,8 +215,10 @@ a {
     align-items: center;
     padding: 0 1.5rem;
     font-family: var(--font-mono);
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     color: var(--c-text);
     border-left: 1px solid var(--c-border);
     background-color: var(--c-bg-subtle);
@@ -335,7 +337,7 @@ a {
 }
 
 /* --------------------------------------------------------------------------
-   6. HERO SEKCE (50/50 ASYMETRIE, PŘÍSNÉ ZAROVNÁNÍ DOLEVA, STRUČNÝ TEXT)
+   6. HERO SEKCE (50/50 ASYMETRIE, PŘÍSNÉ ZAROVNÁNÍ DOLEVA)
    -------------------------------------------------------------------------- */
 .hero-section {
     background-color: var(--c-surface);
@@ -372,24 +374,6 @@ a {
     color: var(--c-text-muted);
     margin-bottom: 2.5rem;
     max-width: 540px;
-}
-
-.hero-meta-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    font-family: var(--font-mono);
-    font-size: 0.8125rem;
-    color: var(--c-text);
-    border-left: 2px solid var(--c-accent);
-    padding-left: 1.25rem;
-    margin-bottom: 2.5rem;
-}
-
-.hero-meta-item strong {
-    color: var(--c-text-muted);
-    font-weight: 500;
-    margin-right: 0.5rem;
 }
 
 .hero-actions {
@@ -434,7 +418,7 @@ a {
 }
 
 /* --------------------------------------------------------------------------
-   7. SEKCE 01: O NÁS (STRUČNÁ, VĚCNÁ, ČISTÁ)
+   7. SEKCE 01: O STUDIU (STRUČNÁ, VĚCNÁ, ČISTÁ)
    -------------------------------------------------------------------------- */
 .split-about {
     display: grid;
@@ -479,7 +463,7 @@ a {
 }
 
 /* --------------------------------------------------------------------------
-   8. SEKCE 02: SLUŽBY (JEDNODUCHÝ ČISTÝ PŘEHLED)
+   8. SEKCE 02: SLUŽBY (POUZE TETOVÁNÍ A PIERCING)
    -------------------------------------------------------------------------- */
 .services-section {
     background-color: var(--c-surface);
@@ -496,10 +480,10 @@ a {
 .service-box {
     background-color: var(--c-bg);
     border: 1px solid var(--c-border);
-    padding: 2.25rem;
+    padding: 2.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1rem;
     transition: border-color 0.15s ease;
 }
 
@@ -508,20 +492,20 @@ a {
 }
 
 .service-box-title {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     font-weight: 800;
     text-transform: uppercase;
     color: var(--c-text);
 }
 
 .service-box-desc {
-    font-size: 0.9375rem;
+    font-size: 1rem;
     color: var(--c-text-muted);
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 /* --------------------------------------------------------------------------
-   9. SEKCE 03: UKÁZKY PRÁCE & REFERENCE (GALERIE & OVĚŘENÉ ZKUŠENOSTI)
+   9. SEKCE 03: UKÁZKY PRÁCE (POUZE OBRÁZKY BEZ UMĚLÝCH NÁZVŮ)
    -------------------------------------------------------------------------- */
 .gallery-section {
     background-color: var(--c-bg);
@@ -538,46 +522,28 @@ a {
     background-color: var(--c-surface);
     border: 1px solid var(--c-border);
     cursor: pointer;
+    overflow: hidden;
+    height: 340px;
     transition: border-color 0.15s ease;
+    display: block;
 }
 
 .gallery-card:hover {
     border-color: var(--c-text);
 }
 
-.gallery-img-wrap {
-    width: 100%;
-    height: 260px;
-    overflow: hidden;
-    background-color: var(--c-bg-subtle);
-    border-bottom: 1px solid var(--c-border);
-}
-
 .gallery-card-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.25s ease;
 }
 
-.gallery-card-info {
-    padding: 1.25rem 1.5rem;
+.gallery-card:hover .gallery-card-img {
+    transform: scale(1.04);
 }
 
-.gallery-card-title {
-    font-size: 1rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: var(--c-text);
-}
-
-.gallery-card-sub {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--c-text-faint);
-    margin-top: 0.25rem;
-}
-
-/* Reference zákazníků */
+/* Reference zákazníků podle reálných recenzí */
 .testimonials-row {
     border-top: 1px solid var(--c-border);
     padding-top: 4rem;
@@ -597,12 +563,18 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1.5rem;
+    gap: 1.25rem;
+}
+
+.testimonial-stars {
+    color: #eab308;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
 }
 
 .testimonial-text {
     font-size: 0.9375rem;
-    line-height: 1.6;
+    line-height: 1.65;
     color: var(--c-text);
 }
 
@@ -624,81 +596,7 @@ a {
 }
 
 /* --------------------------------------------------------------------------
-   10. SEKCE 04: CENÍK (PŘEHLEDNÝ, ČISTÝ, BEZ PŘEKLIKÁVACÍCH TLAČÍTEK)
-   -------------------------------------------------------------------------- */
-.pricing-section {
-    background-color: var(--c-surface);
-    border-top: 1px solid var(--c-border);
-    border-bottom: 1px solid var(--c-border);
-}
-
-.pricing-table-wrap {
-    width: 100%;
-    overflow-x: auto;
-    border: 1px solid var(--c-border);
-    background-color: var(--c-surface);
-}
-
-.pricing-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-    font-size: 0.9375rem;
-}
-
-.pricing-table th {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--c-text-muted);
-    background-color: var(--c-bg);
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid var(--c-border);
-}
-
-.pricing-table td {
-    padding: 1.15rem 1.5rem;
-    border-bottom: 1px solid var(--c-border);
-    color: var(--c-text);
-}
-
-.pricing-table tr:last-child td {
-    border-bottom: none;
-}
-
-.pricing-table tr:hover td {
-    background-color: var(--c-bg-subtle);
-}
-
-.col-bold {
-    font-weight: 700;
-}
-
-.col-unit {
-    font-family: var(--font-mono);
-    font-size: 0.8125rem;
-    color: var(--c-text-muted);
-}
-
-.col-price {
-    font-family: var(--font-mono);
-    font-weight: 700;
-    font-size: 1rem;
-    text-align: right;
-    white-space: nowrap;
-}
-
-.pricing-footnote {
-    margin-top: 1.25rem;
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--c-text-muted);
-}
-
-/* --------------------------------------------------------------------------
-   11. SEKCE 05: KONTAKT (PŘÍMÝ, VĚCNÝ, BEZ FORMULÁŘE)
+   10. SEKCE 04: KONTAKT (JEDINÉ MÍSTO S TELEFONEM A ADRESOU + MAPA S PINEM)
    -------------------------------------------------------------------------- */
 .contact-section {
     background-color: var(--c-dark-bg);
@@ -772,7 +670,7 @@ a {
 .map-wrapper {
     width: 100%;
     height: 100%;
-    min-height: 420px;
+    min-height: 440px;
     border: 1px solid var(--c-dark-border);
     background-color: var(--c-dark-surface);
 }
@@ -785,7 +683,7 @@ a {
 }
 
 /* --------------------------------------------------------------------------
-   12. PATA WEBU (FOOTER: JEDNODUCHÝ JEDNOŘÁDKOVÝ)
+   11. PATA WEBU (FOOTER)
    -------------------------------------------------------------------------- */
 .site-footer {
     background-color: #0c0d0f;
@@ -817,7 +715,7 @@ a {
 }
 
 /* --------------------------------------------------------------------------
-   13. LIGHTBOX (ČISTÝ OSTROHRANNÝ MODÁL PRO OBRÁZKY)
+   12. LIGHTBOX (ČISTÝ OSTROHRANNÝ MODÁL PRO OBRÁZKY)
    -------------------------------------------------------------------------- */
 .modal-overlay {
     position: fixed;
@@ -847,7 +745,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.5rem;
+    padding: 0.75rem 1.25rem;
     border-bottom: 1px solid var(--c-dark-border);
     font-family: var(--font-mono);
     font-size: 0.75rem;
@@ -875,18 +773,18 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-height: 75vh;
+    max-height: 80vh;
     overflow: hidden;
 }
 
 .modal-img {
     max-width: 100%;
-    max-height: 75vh;
+    max-height: 80vh;
     object-fit: contain;
 }
 
 /* --------------------------------------------------------------------------
-   14. RESPONZIVITA PRO MOBILY & TABLETY
+   13. RESPONZIVITA
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
     .hero-grid {
@@ -900,7 +798,7 @@ a {
     }
 
     .hero-visual {
-        min-height: 380px;
+        min-height: 420px;
     }
 
     .split-about {
@@ -954,6 +852,10 @@ a {
 
     .gallery-grid {
         grid-template-columns: 1fr;
+    }
+
+    .gallery-card {
+        height: 280px;
     }
 
     .footer-inner {

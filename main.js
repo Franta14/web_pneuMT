@@ -1,5 +1,5 @@
 /**
- * ŘEMESLNÁ DÍLNA & VÝROBA — UNIVERZÁLNÍ ŠABLONA PRO ŘEMESLA
+ * MARI&TALI TATTOO-PIERCING (KOLÍN)
  * Čistý Vanilla JavaScript bez externích knihoven.
  */
 
@@ -56,19 +56,17 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', updateActiveNav, { passive: true });
 
     /* ==========================================================================
-       3. MINIMALISTICKÝ LIGHTBOX PRO GALERII
+       3. MINIMALISTICKÝ LIGHTBOX PRO GALERII (POUZE OBRÁZKY)
        ========================================================================== */
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-img');
-    const modalTitle = document.getElementById('modal-title');
     const modalClose = document.getElementById('modal-close');
     const galleryCards = document.querySelectorAll('.gallery-card');
 
-    const openModal = (src, title) => {
+    const openModal = (src) => {
         if (!modal || !modalImg) return;
         modalImg.src = src;
-        modalImg.alt = title || 'Ukázka práce';
-        if (modalTitle) modalTitle.textContent = title || 'Ukázka práce';
+        modalImg.alt = 'Mari&Tali Tattoo-Piercing Kolín';
         modal.classList.add('is-active');
         document.body.style.overflow = 'hidden';
     };
@@ -82,9 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
     galleryCards.forEach(card => {
         card.addEventListener('click', () => {
             const img = card.querySelector('.gallery-card-img');
-            const title = card.querySelector('.gallery-card-title')?.textContent;
             if (img) {
-                openModal(img.src, title);
+                openModal(img.src);
             }
         });
     });
@@ -95,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (modal) {
         modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
+            if (e.target === modal || e.target.classList.contains('modal-body')) {
                 closeModal();
             }
         });
@@ -118,42 +115,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
-
-/* ==========================================================================
-   PŘÍPRAVA PRO DYNAMICKÝ CENÍK Z GOOGLE TABULEK
-   ==========================================================================
-   Postup:
-   1. V Google Tabulce zvolte Soubor -> Sdílet -> Publikovat na webu (formát CSV).
-   2. Zavolejte window.loadGoogleSheetsPricing(csvUrl).
-*/
-window.loadGoogleSheetsPricing = async function(csvUrl) {
-    const tableBody = document.getElementById('price-table-body');
-    if (!tableBody) return;
-
-    try {
-        const response = await fetch(csvUrl);
-        const csvText = await response.text();
-        const rows = csvText.trim().split('\n').map(r => r.split(','));
-        const dataRows = rows.slice(1); // vynechat záhlaví
-        
-        tableBody.innerHTML = '';
-
-        dataRows.forEach(cells => {
-            const [item, unit, priceWithoutVat, priceWithVat] = cells.map(c => c?.replace(/"/g, '').trim());
-            if (!item) return;
-
-            const tr = document.createElement('tr');
-            tr.innerHTML = `
-                <td class="col-bold">${item}</td>
-                <td class="col-unit">${unit || 'úkon'}</td>
-                <td class="col-price">${priceWithoutVat || '—'}</td>
-                <td class="col-price">${priceWithVat || '—'}</td>
-            `;
-            tableBody.appendChild(tr);
-        });
-
-        console.log(`[Ceník] Načteno ${dataRows.length} položek z Google Tabulek.`);
-    } catch (err) {
-        console.error('[Ceník] Chyba při načítání:', err);
-    }
-};
